@@ -1,9 +1,12 @@
 <template>
-    <h1>HEADER</h1>
+    <img src="../assets/baby giraffe.png" class="main_logo" alt="">
 </template>
 
 <style>
-
+.main_logo{
+    width: 170px;
+    height: 200px;
+}
 </style>
 
 <script>

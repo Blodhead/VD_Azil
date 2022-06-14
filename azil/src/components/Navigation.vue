@@ -1,49 +1,53 @@
 <template>
-    <div class="menu">
-<div id="google_translate_element"></div>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Почетна</a> 
-        <div class="dropdown show">
-            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" target="_blank" rel="noopener">Животиње</a> 
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand active" href="#"><img src="../assets/Home.png" class="invert" alt="">Почетна</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav">
 
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Животиње
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#"><img src="../assets/dog-logo.png" class="small-icons" alt=""> Пси</a>
+            <a class="dropdown-item" href="#"><img src="../assets/cat-logo.png" class="small-icons" alt="">Мачке</a>
+            <a class="dropdown-item" href="#"><img src="../assets/bird-logo.png" class="small-icons" alt="">Птице</a>
             </div>
-        </div>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener">Изгубљени љубимци</a> 
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Додај оглас</a> 
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">Мој налог</a> 
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">О нама</a> 
-
-    </div>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Изгубљени љубимци</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Додај оглас</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Мој налог</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">О нама</a>
+        </li>
+        
+    </ul>
+  </div>
+</nav>
 </template>
 
 <style>
 
-.menu a{ 
-    color: whitesmoke;
-    float: left;
-    padding: 14px 16px;
-    text-align: center;
-    font-size: 14px;
-    text-decoration: none;
-    margin-right: 5px;
+/*overflow: hidden;*/
+.invert{
+    filter: invert(1);
+    margin-top: -6px;
 }
-.menu a:link, .menu a:visited {
-  padding: 10px 20px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
+.small-icons{
+    width: 25px;
+    height: 30px;
 }
-
-.menu a:hover,.menu a:active {
-  background-color: green;
-  color: white;
-}
-.menu {
-    overflow: hidden;
-    background-color: #333;
+.navbar-dark .navbar-nav .nav-link{
+    font-size: 15px;
 }
 </style>
 
