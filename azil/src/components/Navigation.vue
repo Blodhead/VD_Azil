@@ -48,6 +48,7 @@
 }
 .navbar-dark .navbar-nav .nav-link{
     font-size: 15px;
+    /*font-family: cirilica;*/
 }
 </style>
 
