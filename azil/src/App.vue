@@ -38,6 +38,13 @@ nav a {
 nav a.router-link-exact-active {
   color: #42b983;
 }
+
+@font-face {
+  font-family: "cirilica";
+  src: local("cirilica"),
+  url(fonts/BRUSHSC.ttf) format("truetype");
+}
+
 </style>
 
 <script>
