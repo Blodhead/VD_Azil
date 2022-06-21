@@ -12,8 +12,14 @@
                 Животиње
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#"><img src="../assets/dog-logo.png" class="small-icons" alt=""> Пси</a>
+
+            <router-link to="/dogs">
+                <a class="dropdown-item" href="#"><img src="../assets/dog-logo.png" class="small-icons" alt=""> Пси</a>
+            </router-link>
+            
             <a class="dropdown-item" href="#"><img src="../assets/cat-logo.png" class="small-icons" alt="">Мачке</a>
+            
+
             <a class="dropdown-item" href="#"><img src="../assets/bird-logo.png" class="small-icons" alt="">Птице</a>
             </div>
         </li>
@@ -54,9 +60,11 @@
 
 <script>
 
+import DogsView from '../views/DogsView.vue'
 
 export default{
 
-    name:'Navigation'
+    name:'Navigation',
+    components:{DogsView}
 }
 </script>
