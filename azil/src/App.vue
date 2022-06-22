@@ -1,10 +1,7 @@
 <template>
   <div id="app">
     <MyHeader></MyHeader>
-    <MyNavigation></MyNavigation>
-    <nav>
 
-    </nav>
     <router-view/>
     <MyFooter></MyFooter>
   </div>
@@ -49,14 +46,12 @@ nav a.router-link-exact-active {
 <script>
 import MyHeader from '@/components/MyHeader.vue'
 import MyFooter from '@/components/MyFooter.vue'
-import MyNavigation from '@/components/MyNavigation.vue'
 
 export default{
   name: 'App',
   components: {
     MyHeader,
-    MyFooter,
-    MyNavigation
+    MyFooter
   }
 }
 </script>
