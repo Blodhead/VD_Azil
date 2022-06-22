@@ -1,9 +1,12 @@
 <template>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand active" href="#"><img src="../assets/Home.png" class="invert" alt="">Почетна</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <router-link to="/">
+        <a class="navbar-brand active" href="#"><img src="../assets/Home.png" class="invert" alt="">Почетна</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    </router-link>
+
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav">
 
@@ -37,7 +40,10 @@
             <a class="nav-link" href="#">Мој налог</a>
         </li>
         <li class="nav-item">
+
+        <router-link to="/about">
             <a class="nav-link" href="#">О нама</a>
+        </router-link>
         </li>
         
     </ul>
