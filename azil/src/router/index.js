@@ -4,6 +4,10 @@ import HomeView from '../views/HomeView.vue'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/dist/js/bootstrap'
 import DogsView from '../views/DogsView.vue'
+import CatsView from '../views/CatsView.vue'
+import BirdsView from '../views/BirdsView.vue'
+
+
 
 Vue.use(VueRouter)
 
@@ -25,6 +29,16 @@ const routes = [
     path: '/dogs',
     name: 'dogs',
     component: DogsView
+  },
+  {
+    path: '/cats',
+    name: 'cats',
+    component: CatsView
+  },
+  {
+    path: '/birds',
+    name: 'birds',
+    component: BirdsView
   },
 
 ]

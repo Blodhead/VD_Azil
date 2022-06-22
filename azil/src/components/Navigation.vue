@@ -17,10 +17,14 @@
                 <a class="dropdown-item" href="#"><img src="../assets/dog-logo.png" class="small-icons" alt=""> Пси</a>
             </router-link>
             
-            <a class="dropdown-item" href="#"><img src="../assets/cat-logo.png" class="small-icons" alt="">Мачке</a>
-            
+            <router-link to="/cats">
+                <a class="dropdown-item" href="#"><img src="../assets/cat-logo.png" class="small-icons" alt="">Мачке</a>
+            </router-link>
 
-            <a class="dropdown-item" href="#"><img src="../assets/bird-logo.png" class="small-icons" alt="">Птице</a>
+            <router-link to="/birds">
+                <a class="dropdown-item" href="#"><img src="../assets/bird-logo.png" class="small-icons" alt="">Птице</a>
+            </router-link>
+            
             </div>
         </li>
         <li class="nav-item">
@@ -61,10 +65,17 @@
 <script>
 
 import DogsView from '../views/DogsView.vue'
+import CatsView from '../views/CatsView.vue'
+import BirdsView from '../views/BirdsView.vue'
+
 
 export default{
 
     name:'Navigation',
-    components:{DogsView}
+    components:{
+        DogsView,
+        CatsView,
+        BirdsView
+    }
 }
 </script>
