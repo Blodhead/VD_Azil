@@ -64,18 +64,14 @@
 
 <script>
 
-import DogsView from '../views/DogsView.vue'
+/*import DogsView from '../views/DogsView.vue'
 import CatsView from '../views/CatsView.vue'
 import BirdsView from '../views/BirdsView.vue'
-
+*/
 
 export default{
 
-    name:'Navigation',
-    components:{
-        DogsView,
-        CatsView,
-        BirdsView
-    }
+    name:'MyNavigation',
+
 }
 </script>

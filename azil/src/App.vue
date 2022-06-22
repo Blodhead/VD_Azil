@@ -1,13 +1,13 @@
 <template>
   <div id="app">
-    <Header></Header>
-    <Navigation></Navigation>
+    <MyHeader></MyHeader>
+    <MyNavigation></MyNavigation>
     <nav>
       <router-link to="/">Home</router-link> |
       <router-link to="/about">About</router-link>
     </nav>
     <router-view/>
-    <Footer></Footer>
+    <MyFooter></MyFooter>
   </div>
 </template>
 
@@ -48,16 +48,16 @@ nav a.router-link-exact-active {
 </style>
 
 <script>
-import Header from '@/components/Header.vue'
-import Footer from '@/components/Footer.vue'
-import Navigation from '@/components/Navigation.vue'
+import MyHeader from '@/components/MyHeader.vue'
+import MyFooter from '@/components/MyFooter.vue'
+import MyNavigation from '@/components/MyNavigation.vue'
 
 export default{
   name: 'App',
   components: {
-    Header,
-    Footer,
-    Navigation
+    MyHeader,
+    MyFooter,
+    MyNavigation
   }
 }
 </script>
