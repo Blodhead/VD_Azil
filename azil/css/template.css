@@ -5,6 +5,12 @@
   content: "";
   height: 0; }
 
+.bot-fix{
+  position:absolute;
+  bottom: 0px;
+  width: 100%;
+}
+    
 .fr-hide-by-clipping {
   position: absolute;
   width: 1px;
