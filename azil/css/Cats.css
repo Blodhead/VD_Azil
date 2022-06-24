@@ -15,6 +15,11 @@
   padding: 30px;
 }
 
+.u-body{
+
+background: url("../images/cat-play.jpg");
+
+}
 .u-section-1 .u-text-1 {
   font-weight: 700;
   text-transform: uppercase;

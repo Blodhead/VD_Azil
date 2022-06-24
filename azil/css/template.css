@@ -11,6 +11,14 @@
   width: 100%;
 }
     
+.u-header{
+  background-color: #1b1f28;
+
+}
+.u-text-grey-90{
+  color: white !important;
+}
+
 .fr-hide-by-clipping {
   position: absolute;
   width: 1px;
@@ -36198,7 +36206,7 @@ li.active > a.u-button-style.u-text-grey-90,
 li.active > a.u-button-style.u-text-grey-90[class*="u-border-"],
 a.u-button-style.u-text-grey-90,
 a.u-button-style.u-text-grey-90[class*="u-border-"] {
-  color: #1a1a1a !important;
+  color: white !important;
 }
 a.u-button-style.u-text-grey-90:hover,
 a.u-button-style.u-text-grey-90[class*="u-border-"]:hover,
@@ -36230,7 +36238,7 @@ a.u-button-style.u-button-style.active > .u-text-active-grey-90[class*="u-border
 :not(.level-2) > .u-nav > .u-nav-item > a.u-nav-link.u-nav-link.u-text-active-grey-90.active,
 .u-popupmenu-items.u-text-hover-grey-90 .u-nav-link:hover,
 .u-popupmenu-items.u-popupmenu-items.u-text-active-grey-90 .u-nav-link.active {
-  color: #1a1a1a !important;
+  color: #478ac9 !important
 }
 .u-text-grey-90 .u-svg-link,
 .u-text-hover-grey-90:hover .u-svg-link,
@@ -36671,6 +36679,7 @@ a.u-link.u-text-hover-grey-90:hover {
 
 
  .u-footer {
+  background-color: #1b1f28;
   background-image: none;
 }
 
