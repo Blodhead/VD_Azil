@@ -75,7 +75,7 @@ function fill_html(){
         
 
     document.getElementById("context").innerHTML =  document.getElementById("context").innerHTML +""+
-"<section class=\"u-section-1 u-post\">"+
+"<section class=\"u-section-1 u-post\" id = \""+i+"\">"+
     "<div class=\"u-clearfix u-sheet u-valign-middle u-sheet-1\">"+
       "<div class=\"u-clearfix u-expanded-width u-gutter-18 u-layout-wrap u-layout-wrap-1\" id=\"d_"+i+"\">"+
         "<div class=\"u-layout oval\">"+
@@ -237,5 +237,18 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
 
+
+}
+
+function sortByAge(){
+
+  for(var i = 0; i < dogs_array.length; i++){
+    for(var j = 0; j < dogs_array.length; j++){
+    
+      
+
+    }
+
+  }
 
 }
