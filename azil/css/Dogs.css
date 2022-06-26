@@ -4,6 +4,12 @@
   background-attachment: fixed;
 }
 
+.oval{
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
+
 .bot-margin{
 margin-bottom: 50px;
 }

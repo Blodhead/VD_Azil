@@ -139,7 +139,7 @@ function fill_html(){
                   "<div class=\"u-layout-row\">"+
                     "<div class=\"u-align-left u-container-style u-layout-cell u-size-60 u-layout-cell-3\">"+
                       "<div class=\"u-container-layout u-container-layout-3\">"+
-                        "<div class=\"u-image u-image-circle u-preserve-proportions u-image-1\" data-image-width=\"900\" data-image-height=\"900\"></div>"+
+                        "<div class=\"u-image u-image-circle u-preserve-proportions u-image-1\" style=\"background-image: url(" + dogs_array[i].images[0] +");\" data-image-width=\"900\" data-image-height=\"900\"></div>"+
                       "</div>"+
                     "</div>"+
                   "</div>"+

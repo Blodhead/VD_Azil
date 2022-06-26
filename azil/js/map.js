@@ -1,10 +1,10 @@
 // Initialize and add the map
 function initMap() {
     // The location of uzice
-    const uzice = { lat: -25.344, lng: 131.031 };
+    const uzice = { lat: 43.857674, lng: 19.839283 };
     // The map, centered at uzice
     const map = new google.maps.Map(document.getElementById("map"), {
-      zoom: 4,
+      zoom: 15,
       center: uzice,
     });
     // The marker, positioned at uzice

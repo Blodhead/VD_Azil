@@ -2,6 +2,12 @@
   min-height: 740px;
 }
 
+.u-body{
+  background: url("../images/poz1.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
 .u-section-1 .u-layout-wrap-1 {
   margin: 70px 0;
 }
@@ -206,9 +212,5 @@
 
   .u-section-1 .u-image-4 {
     min-height: 364px;
-  }
-
-  .u-body{
-    background: url("../images/poz1.jpg");
   }
 }

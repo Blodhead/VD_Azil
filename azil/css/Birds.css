@@ -1,7 +1,21 @@
 .u-section-1 .u-sheet-1 {
   min-height: 238px;
 }
-
+.bot-margin{
+  margin-bottom: 50px;
+  }
+  
+.u-layout{
+  background-color:white;
+}
+.u-post{
+  margin-top: 40px !important;
+}
+.oval{
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px;
+}
 .u-section-1 .u-layout-wrap-1 {
   margin-top: 0;
   margin-bottom: 0;
@@ -18,7 +32,8 @@
 .u-body{
 
   background: url("../images/bird-play.jpg");
-  
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   }
 
 .u-section-1 .u-text-1 {
@@ -60,10 +75,12 @@
 }
 
 .u-section-1 .u-image-1 {
-  height: 189px;
-  background-image: url("../images/uuu.jpg");
+  -moz-border-radius: 50%;/*may encounter problem later*/
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
   background-position: 50% 50%;
-  width: 189px;
   margin: 0 auto;
 }
 
