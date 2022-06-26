@@ -1,5 +1,18 @@
 .u-body{
   background: url("../images/dog-play.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.bot-margin{
+margin-bottom: 50px;
+}
+
+.u-layout{
+  background-color:white;
+}
+.u-post{
+  margin-top: 40px !important;
 }
 
 .u-section-1 .u-sheet-1 {
