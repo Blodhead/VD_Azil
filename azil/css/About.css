@@ -207,4 +207,8 @@
   .u-section-1 .u-image-4 {
     min-height: 364px;
   }
+
+  .u-body{
+    background: url("../images/poz1.jpg");
+  }
 }
