@@ -41,10 +41,12 @@ function fill_html(){
 
     for(var i = 0; i < dogs_array.length; i++){
 
+        
+
     document.getElementById("context").innerHTML =  document.getElementById("context").innerHTML +""+
-"<section class=\"u-section-1 u-post\" id=\"carousel_974c\">"+
+"<section class=\"u-section-1 u-post\">"+
     "<div class=\"u-clearfix u-sheet u-valign-middle u-sheet-1\">"+
-      "<div class=\"u-clearfix u-expanded-width u-gutter-18 u-layout-wrap u-layout-wrap-1\">"+
+      "<div class=\"u-clearfix u-expanded-width u-gutter-18 u-layout-wrap u-layout-wrap-1\" id=\"dog_"+i+"\">"+
         "<div class=\"u-layout\">"+
           "<div class=\"u-layout-row\">"+
             "<div class=\"u-size-37\">"+
@@ -95,5 +97,6 @@ function fill_html(){
   "</section>";
     }
 
-  var i = 0;
+
+    document.getElementById("dog_" + (dogs_array.length-1)).style.marginBottom = "120px";
 }
