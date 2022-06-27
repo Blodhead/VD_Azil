@@ -9,46 +9,46 @@ function initialize(){
     }else{
         dogs_array = [
             {
-                name: "Loki",
+                name: "Neo",
                 age: "3",
-                weight: "2kg",
-                breed: "samoyed",
-                description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                weight: "1kg",
+                breed: "Domestic Short Hair",
+                description: " Neo is an eccentric young cat! He loves company & happily chirps when you enter the room. You can start his purring machine by scratching him under the chin."
             },
             {
-                name: "Toki",
-                age: "3",
+                name: "Lexi",
+                age: "2",
                 weight: "2kg",
-                breed: "samoyed",
-                description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                breed: "Domestic Short Hair",
+                description: "Lexi is a lovely, sweet lady. She gives respect and expects it in return. She chirps and greets with a gentle and friendly demeanor. She is petite and and needs tempting for new foods. She will be a loving family member and is ready for her new home!"
             },
             {
-                name: "Zoki",
-                age: "3",
-                weight: "2kg",
-                breed: "samoyed",
-                description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                name: "Nanny",
+                age: "1",
+                weight: "1kg",
+                breed: "Domestic Short Hair",
+                description: "Nanny is a very loving kitty. She likes people's attention and if you give her pets and hugs then she will purr away for you. She is a young cat that still has kitten energy and will bat around toys, chase laser pointers and wands. Don't be surprised if she follows you around the house to see what you are up to."
             },
             {
-              name: "Loki",
-              age: "3",
-              weight: "2kg",
-              breed: "samoyed",
-              description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+              name: "Zoi",
+              age: "1",
+              weight: "1kg",
+              breed: "Domestic Short Hair",
+              description: "Zoi is playful and has the right amount of independence and snuggliness! He is happy to find his own things to play with but will gladly play with you too! He does well with children, other cats, and dogs."
           },
           {
-              name: "Toki",
-              age: "3",
+              name: "Neli",
+              age: "2",
               weight: "2kg",
-              breed: "samoyed",
-              description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+              breed: "Domestic Short Haired",
+              description: "Neli loves to play! She is fun to play with and to watch. Neli will appreciate having another friendly feline to hangout with. Some of her favorite toys are sparkle balls, wand toys and the occasional ball ring. "
           },
           {
-              name: "Zoki",
+              name: "Max",
               age: "3",
               weight: "2kg",
-              breed: "samoyed",
-              description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+              breed: "Domestic Short Hair",
+              description: "Though he likes being petted and brushed, Max is not a fan of being picked up. He loves his floor toys and is getting used to wand play, and a room with a view would be much appreciated so he can chatter at birds and squirrels. "
           }
         
         

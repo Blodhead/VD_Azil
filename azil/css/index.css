@@ -1,7 +1,13 @@
+
+
  .u-section-1 {
   background-image: url("../images/bgmin.jpg");
   background-position: 50% 50%;
   min-height: 672px;
+}
+
+.u-text-palette-2-base {
+  color: rgb(9, 110, 168) !important; 
 }
 
 .u-section-1 .u-layout-wrap-1 {

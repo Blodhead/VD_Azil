@@ -10,52 +10,52 @@ function initialize(){
       /* Ovde dodavati podatke */
         dogs_array = [
             {
-                name: "Loki",
+                name: "Julie",
                 age: "4",
-                weight: "9kg",
-                breed: "samoyed",
+                weight: "500g",
+                breed: "Parakeet",
                 images:["../images/Ajaks1.jpg", "../images/Ajaks2.jpg", "../images/Ajaks3.jpg", "../images/Ajaks4.jpg"],
-                description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                description: "Julie is a budgie, or budgerigar, who is looking for her new forever home. She prefers the company of other birds, so she would do best in an aviary situation or in a patient home that is willing to work her and a buddy."
             },
             {
-                name: "Toki",
+                name: "Rori",
                 age: "5",
-                weight: "4kg",
-                breed: "samoyed",
+                weight: "300g",
+                breed: "Parakeet",
                 images:["../images/ari1.jpg"],
-                description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. "
             },
             {
-                name: "Zoki",
+                name: "Poli",
                 age: "4",
-                weight: "5kg",
-                breed: "samoyed",
+                weight: "1kg",
+                breed: "Macaw",
                 images:["../images/ari1.jpg"],
-                description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+                description: "Poli is friendly, chatty, and social. She is shy meeting new people but once she considers you a friend, Poli wants to be the center of attention. Poli would do best in a home who wants a buddy to do everything with."
             },
             {
-              name: "Moki",
-              age: "3",
-              weight: "2kg",
-              breed: "samoyed",
+              name: "Set",
+              age: "1",
+              weight: "300g",
+              breed: "Parakeet",
               images:["../images/ari1.jpg"],
-              description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+              description: "Neptune is a little shy around people, and more interested in interacting with her mate, Saturn. The pair would likely do best in an aviary setting with lots of space, and could potentially do well with other birds. "
           },
           {
-              name: "Aoki",
+              name: "Loli",
               age: "3",
-              weight: "7kg",
-              breed: "samoyed",
+              weight: "200g",
+              breed: "Parakeet",
               images:["../images/ari1.jpg"],
-              description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+              description: "Loli is still getting comfortable around people, and definitely has a curious side. He is used to living with other birds, but can be a little more timid."
           },
           {
               name: "Voki",
               age: "12",
-              weight: "6kg",
-              breed: "samoyed",
+              weight: "1kg",
+              breed: "Macaw",
               images:["../images/ari1.jpg"],
-              description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+              description: "Voki is beautiful hybrid Macaw who we are still getting to know. She is very curious and eager to interact with us but is still building her confidence. Lola would do best in a home willing to go at her pace."
           }
         
         

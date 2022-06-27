@@ -1,3 +1,9 @@
+.u-body{
+  background: url("../images/poz6.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 .u-section-1 .u-sheet-1 {
   min-height: 723px;
 }
