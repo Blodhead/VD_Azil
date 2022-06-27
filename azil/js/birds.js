@@ -11,30 +11,30 @@ function initialize(){
         dogs_array = [
             {
                 name: "Loki",
-                age: "3",
-                weight: "2kg",
+                age: "4",
+                weight: "9kg",
                 breed: "samoyed",
                 images:["../images/Ajaks1.jpg", "../images/Ajaks2.jpg", "../images/Ajaks3.jpg", "../images/Ajaks4.jpg"],
                 description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             },
             {
                 name: "Toki",
-                age: "3",
-                weight: "2kg",
+                age: "5",
+                weight: "4kg",
                 breed: "samoyed",
                 images:["../images/ari1.jpg"],
                 description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             },
             {
                 name: "Zoki",
-                age: "3",
-                weight: "2kg",
+                age: "4",
+                weight: "5kg",
                 breed: "samoyed",
                 images:["../images/ari1.jpg"],
                 description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
             },
             {
-              name: "Loki",
+              name: "Moki",
               age: "3",
               weight: "2kg",
               breed: "samoyed",
@@ -42,17 +42,17 @@ function initialize(){
               description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
           },
           {
-              name: "Toki",
+              name: "Aoki",
               age: "3",
-              weight: "2kg",
+              weight: "7kg",
               breed: "samoyed",
               images:["../images/ari1.jpg"],
               description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
           },
           {
-              name: "Zoki",
-              age: "3",
-              weight: "2kg",
+              name: "Voki",
+              age: "12",
+              weight: "6kg",
               breed: "samoyed",
               images:["../images/ari1.jpg"],
               description: "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
@@ -189,7 +189,7 @@ function fill_html(){
     }
 
 
-    document.getElementById("d_" + (dogs_array.length-1)).style.marginBottom = "120px";
+    document.getElementById("context").innerHTML +="<div style=\"margin-top:120px\">&nbsp</div>"
 }
 
 function openModal() {
@@ -240,12 +240,85 @@ function showSlides(n) {
 
 }
 
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+var sort_age = false;
+var sort_name = false;
+
 function sortByAge(){
 
+  if(sort_age == true){sort_age = false; return}
+
+  sort_age = true;
   for(var i = 0; i < dogs_array.length; i++){
-    for(var j = 0; j < dogs_array.length; j++){
+    for(var j = i; j < dogs_array.length; j++){
     
-      
+      if(parseInt(dogs_array[i].age) < parseInt(dogs_array[j].age)){
+
+        var temp = document.createElement("div");
+        temp = document.getElementById(""+j).innerHTML;
+
+        var tempp = dogs_array[j];
+
+        document.getElementById(""+j).innerHTML = document.getElementById(""+i).innerHTML;
+        dogs_array[j] =  dogs_array[i];
+
+
+        document.getElementById(""+i).innerHTML = temp;
+        dogs_array[i] =  tempp;
+
+
+      }
+
+    }
+
+  }
+
+}
+
+function sortByName(){
+
+  if(sort_name == true){sort_name = false; return}
+
+  sort_name = true;
+
+  for(var i = 0; i < dogs_array.length; i++){
+    for(var j = i; j < dogs_array.length; j++){
+    
+      if(dogs_array[i].name > dogs_array[j].name){
+
+        var temp = document.createElement("div");
+        temp = document.getElementById(""+j).innerHTML;
+
+        var tempp = dogs_array[j];
+
+        document.getElementById(""+j).innerHTML = document.getElementById(""+i).innerHTML;
+        dogs_array[j] =  dogs_array[i];
+
+
+        document.getElementById(""+i).innerHTML = temp;
+        dogs_array[i] =  tempp;
+
+
+      }
 
     }
 
