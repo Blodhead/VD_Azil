@@ -260,14 +260,10 @@ function myFunction() {
   }
 }
 
-var sort_age = false;
-var sort_name = false;
 
 function sortByAge(){
 
-  if(sort_age == true){sort_age = false; return}
 
-  sort_age = true;
   for(var i = 0; i < dogs_array.length; i++){
     for(var j = i; j < dogs_array.length; j++){
     
@@ -294,16 +290,78 @@ function sortByAge(){
 
 }
 
+function noSort(){
+  location.reload();
+}
+
 function sortByName(){
 
-  if(sort_name == true){sort_name = false; return}
 
-  sort_name = true;
 
   for(var i = 0; i < dogs_array.length; i++){
     for(var j = i; j < dogs_array.length; j++){
     
       if(dogs_array[i].name > dogs_array[j].name){
+
+        var temp = document.createElement("div");
+        temp = document.getElementById(""+j).innerHTML;
+
+        var tempp = dogs_array[j];
+
+        document.getElementById(""+j).innerHTML = document.getElementById(""+i).innerHTML;
+        dogs_array[j] =  dogs_array[i];
+
+
+        document.getElementById(""+i).innerHTML = temp;
+        dogs_array[i] =  tempp;
+
+
+      }
+
+    }
+
+  }
+
+}
+
+
+
+function sortByAgeUP(){
+
+
+  for(var i = 0; i < dogs_array.length; i++){
+    for(var j = i; j < dogs_array.length; j++){
+    
+      if(parseInt(dogs_array[i].age) > parseInt(dogs_array[j].age)){
+
+        var temp = document.createElement("div");
+        temp = document.getElementById(""+i).innerHTML;
+
+        var tempp = dogs_array[i];
+
+        document.getElementById(""+i).innerHTML = document.getElementById(""+j).innerHTML;
+        dogs_array[i] =  dogs_array[j];
+
+
+        document.getElementById(""+j).innerHTML = temp;
+        dogs_array[j] =  tempp;
+
+
+      }
+
+    }
+
+  }
+
+}
+
+
+function sortByNameUP(){
+
+  for(var i = 0; i < dogs_array.length; i++){
+    for(var j = i; j < dogs_array.length; j++){
+    
+      if(dogs_array[i].name < dogs_array[j].name){
 
         var temp = document.createElement("div");
         temp = document.getElementById(""+j).innerHTML;
