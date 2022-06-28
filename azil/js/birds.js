@@ -14,7 +14,7 @@ function initialize(){
                 age: "4",
                 weight: "500g",
                 breed: "Parakeet",
-                images:["../images/Ajaks1.jpg", "../images/Ajaks2.jpg", "../images/Ajaks3.jpg", "../images/Ajaks4.jpg"],
+                images:["../images/birds/Julie1.PNG", "../images/birds/Julie2.PNG"],
                 description: "Julie is a budgie, or budgerigar, who is looking for her new forever home. She prefers the company of other birds, so she would do best in an aviary situation or in a patient home that is willing to work her and a buddy."
             },
             {
@@ -22,7 +22,7 @@ function initialize(){
                 age: "5",
                 weight: "300g",
                 breed: "Parakeet",
-                images:["../images/ari1.jpg"],
+                images:["../images/birds/Rori1.JPG","../images/birds/Rori2.JPG","../images/birds/Rori3.JPG"],
                 description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. "
             },
             {
@@ -30,7 +30,7 @@ function initialize(){
                 age: "4",
                 weight: "1kg",
                 breed: "Macaw",
-                images:["../images/ari1.jpg"],
+                images:["../images/birds/Poli1.PNG","../images/birds/Poli2.PNG","../images/birds/Poli3.PNG","../images/birds/Poli4.PNG"],
                 description: "Poli is friendly, chatty, and social. She is shy meeting new people but once she considers you a friend, Poli wants to be the center of attention. Poli would do best in a home who wants a buddy to do everything with."
             },
             {
@@ -38,7 +38,7 @@ function initialize(){
               age: "1",
               weight: "300g",
               breed: "Parakeet",
-              images:["../images/ari1.jpg"],
+              images:["../images/birds/Set1.PNG","../images/birds/Set2.PNG"],
               description: "Neptune is a little shy around people, and more interested in interacting with her mate, Saturn. The pair would likely do best in an aviary setting with lots of space, and could potentially do well with other birds. "
           },
           {
@@ -46,7 +46,7 @@ function initialize(){
               age: "3",
               weight: "200g",
               breed: "Parakeet",
-              images:["../images/ari1.jpg"],
+              images:["../images/birds/Loli1.PNG"],
               description: "Loli is still getting comfortable around people, and definitely has a curious side. He is used to living with other birds, but can be a little more timid."
           },
           {
@@ -54,7 +54,7 @@ function initialize(){
               age: "12",
               weight: "1kg",
               breed: "Macaw",
-              images:["../images/ari1.jpg"],
+              images:["../images/birds/Voki1.PNG","../images/birds/Voki2.PNG"],
               description: "Voki is beautiful hybrid Macaw who we are still getting to know. She is very curious and eager to interact with us but is still building her confidence. Lola would do best in a home willing to go at her pace."
           }
         
