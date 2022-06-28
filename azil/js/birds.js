@@ -103,7 +103,7 @@ function fill_html(){
                       "<div class=\"u-layout-col\">"+
                         "<div class=\"u-align-left u-container-style u-layout-cell u-shape-rectangle u-size-60 u-layout-cell-1\">"+
                           "<div class=\"u-container-layout u-container-layout-1\">"+
-                            "<h6 class=\"u-text u-text-default u-text-1\">\""+dogs_array[i].name+"\"</h6>"+
+                            "<h6 class=\"u-text u-text-default u-text-1\">"+ dogs_array[i].name +"</h6><hr>"+
                          
                             "<div>"+
 
@@ -139,8 +139,8 @@ function fill_html(){
                       "<div class=\"u-layout-col\">"+
                         "<div class=\"u-align-left u-container-style u-layout-cell u-size-60 u-layout-cell-2\">"+
                           "<div class=\"u-container-layout u-valign-top u-container-layout-2\">"+
-                            "<h6 class=\"u-text u-text-default u-text-3\">\"Description\"</h6>"+
-                            "<p class=\"u-text u-text-grey-40 u-text-4\">\""+ dogs_array[i].description +" \"</p>"+
+                            "<h6 class=\"u-text u-text-default u-text-3\">Description</h6>"+
+                            "<p class=\"u-text u-text-grey-40 u-text-4\">"+ dogs_array[i].description +"</p>"+
                           "</div>"+
                         "</div>"+
                       "</div>"+
