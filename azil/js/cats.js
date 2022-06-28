@@ -2,8 +2,8 @@
 var dogs_array;
 
 function initialize(){
-    localStorage.clear();
-    let dogs = localStorage.getItem("dogs");
+  localStorage.removeItem("cats"); //delete before presentation
+    let dogs = localStorage.getItem("cats");
     if(dogs != null){
         dogs_array = JSON.parse(dogs);
     }else{
