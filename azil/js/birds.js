@@ -93,7 +93,7 @@ function fill_html(){
 "<section class=\"u-section-1 u-post\" id = \""+i+"\">"+
     "<div class=\"u-clearfix u-sheet u-valign-middle u-sheet-1\">"+
       "<div class=\"u-clearfix u-expanded-width u-gutter-18 u-layout-wrap u-layout-wrap-1\" id=\"d_"+i+"\">"+
-        "<div class=\"u-layout oval\">"+
+        "<div class=\"u-layout oval shadow\">"+
           "<div class=\"u-layout-row\">"+
             "<div class=\"u-size-37\">"+
               "<div class=\"u-layout-col\">"+
@@ -155,7 +155,7 @@ function fill_html(){
                   "<div class=\"u-layout-row\">"+
                     "<div class=\"u-align-left u-container-style u-layout-cell u-size-60 u-layout-cell-3\">"+
                       "<div class=\"u-container-layout u-container-layout-3\">"+
-                        "<div class=\"u-image u-image-circle u-preserve-proportions u-image-1 hover-shadow\" style=\"background-image: url(" + dogs_array[i].images[0] +");\" data-image-width=\"900\" data-image-height=\"900\" onclick=\"clickedDog(this);openModal();currentSlide("+ (i+1) +")\" id=\"dog_"+(i+1)+"\"></div>"+
+                        "<div class=\"u-image  shadow u-image-circle u-preserve-proportions u-image-1 hover-shadow\" style=\"background-image: url(" + dogs_array[i].images[0] +");\" data-image-width=\"900\" data-image-height=\"900\" onclick=\"clickedDog(this);openModal();currentSlide("+ (i+1) +")\" id=\"dog_"+(i+1)+"\"></div>"+
                       "</div>"+
                     "</div>"+
                   "</div>"+
