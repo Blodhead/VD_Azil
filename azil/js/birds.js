@@ -9,55 +9,70 @@ function initialize(){
     }else{
       /* Ovde dodavati podatke */
         dogs_array = [
-            {
-                name: "Julie",
-                age: "4",
-                weight: "500g",
-                breed: "Parakeet",
-                images:["../images/birds/Julie1.PNG", "../images/birds/Julie2.PNG"],
-                description: "Julie is a budgie, or budgerigar, who is looking for her new forever home. She prefers the company of other birds, so she would do best in an aviary situation or in a patient home that is willing to work her and a buddy."
-            },
-            {
-                name: "Rori",
-                age: "5",
-                weight: "300g",
-                breed: "Parakeet",
-                images:["../images/birds/Rori1.JPG","../images/birds/Rori2.JPG","../images/birds/Rori3.JPG"],
-                description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. "
-            },
-            {
-                name: "Poli",
-                age: "4",
-                weight: "1kg",
-                breed: "Macaw",
-                images:["../images/birds/Poli1.PNG","../images/birds/Poli2.PNG","../images/birds/Poli3.PNG","../images/birds/Poli4.PNG"],
-                description: "Poli is friendly, chatty, and social. She is shy meeting new people but once she considers you a friend, Poli wants to be the center of attention. Poli would do best in a home who wants a buddy to do everything with."
-            },
-            {
-              name: "Set",
-              age: "1",
-              weight: "300g",
-              breed: "Parakeet",
-              images:["../images/birds/Set1.PNG","../images/birds/Set2.PNG"],
-              description: "Neptune is a little shy around people, and more interested in interacting with her mate, Saturn. The pair would likely do best in an aviary setting with lots of space, and could potentially do well with other birds. "
+          {
+            name: "Julie",
+            age: "4",
+            weight: "500g",
+            breed: "Parakeet",
+            images:["../images/birds/Julie1.PNG", "../images/birds/Julie2.PNG"],
+            description: "Julie is a budgie, or budgerigar, who is looking for her new forever home. She prefers the company of other birds, so she would do best in an aviary situation or in a patient home that is willing to work her and a buddy.",
+            displayed:true  
           },
           {
-              name: "Loli",
-              age: "3",
-              weight: "200g",
-              breed: "Parakeet",
-              images:["../images/birds/Loli1.PNG"],
-              description: "Loli is still getting comfortable around people, and definitely has a curious side. He is used to living with other birds, but can be a little more timid."
+            name: "Rori",
+            age: "5",
+            weight: "300g",
+            breed: "Parakeet",
+            images:["../images/birds/Rori1.JPG","../images/birds/Rori2.JPG","../images/birds/Rori3.JPG"],
+            description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. ",
+            displayed:true
           },
           {
-              name: "Voki",
-              age: "12",
-              weight: "1kg",
-              breed: "Macaw",
-              images:["../images/birds/Voki1.PNG","../images/birds/Voki2.PNG"],
-              description: "Voki is beautiful hybrid Macaw who we are still getting to know. She is very curious and eager to interact with us but is still building her confidence. Lola would do best in a home willing to go at her pace."
-          }
-        
+            name: "Poli",
+            age: "4",
+            weight: "1kg",
+            breed: "Macaw",
+            images:["../images/birds/Poli1.PNG","../images/birds/Poli2.PNG","../images/birds/Poli3.PNG","../images/birds/Poli4.PNG"],
+            description: "Poli is friendly, chatty, and social. She is shy meeting new people but once she considers you a friend, Poli wants to be the center of attention. Poli would do best in a home who wants a buddy to do everything with.",
+            displayed:true
+          },
+          {
+            name: "Set",
+            age: "1",
+            weight: "300g",
+            breed: "Parakeet",
+            images:["../images/birds/Set1.PNG","../images/birds/Set2.PNG"],
+            description: "Neptune is a little shy around people, and more interested in interacting with her mate, Saturn. The pair would likely do best in an aviary setting with lots of space, and could potentially do well with other birds. ",
+
+          },
+          {
+            name: "Loli",
+            age: "3",
+            weight: "200g",
+            breed: "Parakeet",
+            images:["../images/birds/Loli1.PNG"],
+            description: "Loli is still getting comfortable around people, and definitely has a curious side. He is used to living with other birds, but can be a little more timid.",
+            displayed:true
+          },
+          {
+            name: "Voki",
+            age: "12",
+            weight: "1kg",
+            breed: "Macaw",
+            images:["../images/birds/Voki1.PNG","../images/birds/Voki2.PNG"],
+            description: "Voki is beautiful hybrid Macaw who we are still getting to know. She is very curious and eager to interact with us but is still building her confidence. Lola would do best in a home willing to go at her pace.",
+            displayed:true
+          },
+          {
+            name: "Rozi",
+            age: "7",
+            weight: "300g",
+            breed: "Parakeet",
+            images:["../images/birds/Rori1.JPG","../images/birds/Rori2.JPG","../images/birds/Rori3.JPG"],
+            description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. ",
+            displayed:true
+          },
+
         
         ];
         localStorage.setItem("dogs",JSON.stringify(dogs_array));
@@ -196,7 +211,6 @@ function openModal() {
   document.getElementById("myModal"+doggo).style.display = "block";
 
 }
-
 var doggo;
 
 function clickedDog(dog_id){
@@ -210,12 +224,10 @@ function closeModal() {
 
 var slideIndex = 1;
 
-// Next/previous controls
 function plusSlides(n) {
   showSlides(slideIndex += n);
 }
 
-// Thumbnail image controls
 function currentSlide(n) {
   showSlides(slideIndex = n);
 }
@@ -240,33 +252,12 @@ function showSlides(n) {
 
 }
 
-function myFunction() {
-  // Declare variables
-  var input, filter, ul, li, a, i, txtValue;
-  input = document.getElementById('myInput');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("myUL");
-  li = ul.getElementsByTagName('li');
-
-  // Loop through all list items, and hide those who don't match the search query
-  for (i = 0; i < li.length; i++) {
-    a = li[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      li[i].style.display = "";
-    } else {
-      li[i].style.display = "none";
-    }
-  }
-}
-
-
 function sortByAge(){
 
 
   for(var i = 0; i < dogs_array.length; i++){
     for(var j = i; j < dogs_array.length; j++){
-    
+      if(dogs_array[i].displayed == true && dogs_array[j].displayed)
       if(parseInt(dogs_array[i].age) < parseInt(dogs_array[j].age)){
 
         var temp = document.createElement("div");
@@ -300,7 +291,7 @@ function sortByName(){
 
   for(var i = 0; i < dogs_array.length; i++){
     for(var j = i; j < dogs_array.length; j++){
-    
+      if(dogs_array[i].displayed == true && dogs_array[j].displayed)
       if(dogs_array[i].name > dogs_array[j].name){
 
         var temp = document.createElement("div");
@@ -324,14 +315,13 @@ function sortByName(){
 
 }
 
-
-
 function sortByAgeUP(){
 
 
   for(var i = 0; i < dogs_array.length; i++){
     for(var j = i; j < dogs_array.length; j++){
     
+      if(dogs_array[i].displayed == true && dogs_array[j].displayed)
       if(parseInt(dogs_array[i].age) > parseInt(dogs_array[j].age)){
 
         var temp = document.createElement("div");
@@ -355,12 +345,11 @@ function sortByAgeUP(){
 
 }
 
-
 function sortByNameUP(){
 
   for(var i = 0; i < dogs_array.length; i++){
     for(var j = i; j < dogs_array.length; j++){
-    
+      if(dogs_array[i].displayed == true && dogs_array[j].displayed)
       if(dogs_array[i].name < dogs_array[j].name){
 
         var temp = document.createElement("div");
@@ -383,3 +372,26 @@ function sortByNameUP(){
   }
 
 }
+
+function myFunction() {
+ 
+  input = document.getElementById('myInput');
+  for(var i = 0; i < dogs_array.length; i++){
+    
+    if((String(dogs_array[i].name).toUpperCase()).startsWith(input.value.toUpperCase())){
+      document.getElementById(i).style.display="block";
+      dogs_array[i].displayed = true;
+    }else{
+      document.getElementById(i).style.display="none";
+      dogs_array[i].displayed = false;
+    }
+
+  }
+
+}
+
+
+
+
+
+
