@@ -374,8 +374,33 @@ function sortByNameUP(){
 }
 
 function myFunction() {
- 
+
   input = document.getElementById('myInput');
+  
+  if(input.value == ""){
+    for(var i = 0; i < dogs_array.length; i++)
+  
+    {document.getElementById(i).style.display="block";
+    dogs_array[i].displayed = true;}
+    return;
+  }
+  
+  if(!isNaN(input.value)){
+  
+    for(var i = 0; i < dogs_array.length; i++){
+    
+      if(dogs_array[i].age == input.value){
+        document.getElementById(i).style.display="block";
+        dogs_array[i].displayed = true;
+      }else{
+        document.getElementById(i).style.display="none";
+        dogs_array[i].displayed = false;
+      }
+    
+    }
+  
+  }
+  else
   for(var i = 0; i < dogs_array.length; i++){
     
     if((String(dogs_array[i].name).toUpperCase()).startsWith(input.value.toUpperCase())){
@@ -385,10 +410,10 @@ function myFunction() {
       document.getElementById(i).style.display="none";
       dogs_array[i].displayed = false;
     }
-
+  
   }
-
-}
+  
+  }
 
 
 
