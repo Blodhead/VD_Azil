@@ -14,6 +14,7 @@ function initialize(){
                 weight: "2kg",
                 breed: " Staffordshire Bull Terrier",
                 images:["../images/dogs/Rea1.jpg","../images/dogs/Rea2.jpg","../images/dogs/Rea3.jpg","../images/dogs/Rea4.jpg","../images/dogs/Rea6.jpg"],
+                videos:[],
                 description: "Rea is a lovely girl, she is sweet and affectionate with those she knows and will quickly become a cuddly companion in her new home. She will need someone around for most of the day whilst she settles in. She enjoys playtimes with a tennis ball, and is very sweet taking her soft toys to her bed."
                 ,displayed:true  
               },
@@ -23,6 +24,7 @@ function initialize(){
                 weight: "19kg",
                 breed: "Samoyed",
                 images:["../images/dogs/Bonnie1.jpg","../images/dogs/Bonnie2.jpg","../images/dogs/Bonnie3.jpg","../images/dogs/Bonnie4.jpg"],
+                videos:["../images/dogs/boni.mp4"],
                 description: "Bonnie is a sweet and playful grandma, so will need a calm home with owners that are experienced with her breed. Whoever takes on Bonnie must be willing to continue her enjoyment in life. She is highly intelligent, loves to learn new tricks and LOVES to cuddle!"
                 ,displayed:true  
               },
@@ -32,6 +34,7 @@ function initialize(){
                 weight: "2kg",
                 breed: "French Buldog",
                 images:["../images/dogs/Ari2.jpg","../images/dogs/Ari1.jpg","../images/dogs/Ari3.jpg"],
+                videos:[],
                 description: "Ari is very friendly and affectionate. He loves cuddles and tummy rubs and has the cutest snore! He enjoys going out for walks and he is very good in the house. His only weakness is  that he doesn't like other dogs. This is easily managed when approached properly. "
               , displayed:true  
               },
@@ -41,6 +44,7 @@ function initialize(){
               weight: "2kg",
               breed: "Beagle",
               images:["../images/dogs/Ben1.jpg","../images/dogs/Ben2.jpg","../images/dogs/Ben3.jpg","../images/dogs/Ben4.jpg","../images/dogs/Ben5.jpg"],
+              videos:[],
               description: "Ben is a Beagle puppy about 1 year old. He is very sweet and friendly. You will need to have your own large fully enclosed garden so he can have a quick run around. Ben is special because he is such a friendly boy who loves attention and can't wait to go to his new loving forever home."
               ,displayed:true  
             },
@@ -50,6 +54,7 @@ function initialize(){
               weight: "5kg",
               breed: "Chau Chau",
               images:["../images/dogs/Ajaks1.jpg","../images/dogs/Ajaks3.jpg","../images/dogs/Ajaks4.jpg","../images/dogs/Ajaks2.jpg"],
+              videos:[],
               description: "Danny is a sweet boy who is 3 year old. He is a dog who has a happy personality and loves exploring. He knows a few commands, and can be left for a little while. He is very friendly with people and gets on ok with other dogs."
               ,displayed:true  
             },
@@ -59,6 +64,7 @@ function initialize(){
               weight: "1kg",
               breed: "Bichon",
               images:["../images/dogs/Lora3.jpg","../images/dogs/Lora1.jpg","../images/dogs/Lora2.jpg","../images/dogs/Lora5.jpg","../images/dogs/Lora4.jpg"],
+              videos:[],
               description: "Lina is a cute 1 year old Bichon who is looking for a new home. She's sweet dog who can be wary of new people but come round quite quickly, especially if there are a few treats coming her way. She is playful and love her toys. She travels fine in a car and will enjoy joining her new family on fun days out. "
               ,displayed:true  
             }
@@ -169,6 +175,20 @@ function fill_html(){
       "<div class=\"mySlides dog_"+ (i+1) + "\">"+
         "<div class=\"numbertext\">"+(j+1)+ "/"+ dogs_array[i].images.length + "</div>"+
         "<img src="+ dogs_array[i].images[j] +" style=\"width:100%\">"+
+      "</div>";
+
+    }
+
+
+
+    if(dogs_array[i].videos.length > 0)
+    for(var j = 0; j < dogs_array[i].videos.length; j++){
+      document.getElementById("modal-content"+i).innerHTML +=
+      "<div class=\"mySlides dog_"+ (i+1) + "\">"+
+        "<div class=\"numbertext\">"+(j+1)+ "/"+ dogs_array[i].videos.length + "</div>"+
+        "<video width=\"100%\" height=\"100%\" controls>"+
+        "<source src=\""+dogs_array[i].videos[j]+"\" type=\"video/mp4\">"+
+        "</video>"+
       "</div>";
 
     }

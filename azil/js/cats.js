@@ -14,6 +14,7 @@ function initialize(){
                 weight: "1kg",
                 breed: "Domestic Short Hair",
                 images:["../images/cats/Neo1.jpg","../images/cats/Neo2.jpg","../images/cats/Neo3.jpg"],
+                videos:[],
                 description: " Neo is an eccentric young cat! He loves company & happily chirps when you enter the room. You can start his purring machine by scratching him under the chin."
                 ,displayed:true 
               },
@@ -22,6 +23,7 @@ function initialize(){
                 age: "2",
                 weight: "2kg",
                 images:["../images/cats/Leksi2.jpg","../images/cats/Leksi1.jpg","../images/cats/Leksi3.jpg"],
+                videos:[],
                 breed: "Domestic Short Hair",
                 description: "Lexi is a lovely, sweet lady. She gives respect and expects it in return. She chirps and greets with a gentle and friendly demeanor. She is petite and and needs tempting for new foods. She will be a loving family member and is ready for her new home!"
                 ,displayed:true 
@@ -31,6 +33,7 @@ function initialize(){
                 age: "1",
                 weight: "1kg",
                 images:["../images/cats/Nanny1.PNG","../images/cats/Nanny2.PNG","../images/cats/Nanny3.PNG"],
+                videos:["../images/dogs/boni.mp4"],
                 breed: "Domestic Short Hair",
                 description: "Nanny is a very loving kitty. She likes people's attention and if you give her pets and hugs then she will purr away for you. She is a young cat that still has kitten energy and will bat around toys, chase laser pointers and wands. Don't be surprised if she follows you around the house to see what you are up to."
                 ,displayed:true 
@@ -40,6 +43,7 @@ function initialize(){
               age: "1",
               weight: "1kg",
               images:["../images/cats/Zoi1.PNG","../images/cats/Zoi2.PNG"],
+              videos:[],
               breed: "Domestic Short Hair",
               description: "Zoi is playful and has the right amount of independence and snuggliness! He is happy to find his own things to play with but will gladly play with you too! He does well with children, other cats, and dogs."
               ,displayed:true 
@@ -49,6 +53,7 @@ function initialize(){
               age: "2",
               weight: "2kg",
               images:["../images/cats/Neli1.PNG","../images/cats/Neli2.PNG"],
+              videos:[],
               breed: "Domestic Short Haired",
               description: "Neli loves to play! She is fun to play with and to watch. Neli will appreciate having another friendly feline to hangout with. Some of her favorite toys are sparkle balls, wand toys and the occasional ball ring. "
               ,displayed:true 
@@ -58,6 +63,7 @@ function initialize(){
               age: "3",
               weight: "2kg",
               images:["../images/cats/Max1.PNG","../images/cats/Max2.PNG","../images/cats/Max3.PNG"],
+              videos:[],
               breed: "Domestic Short Hair",
               description: "Though he likes being petted and brushed, Max is not a fan of being picked up. He loves his floor toys and is getting used to wand play, and a room with a view would be much appreciated so he can chatter at birds and squirrels. "
               ,displayed:true 
@@ -159,7 +165,7 @@ function fill_html(){
   "</div>"+
 "</section>"+
 
-"<div id=\"myModal"+ (i+1) +"\" class=\"modal\">"+
+"<div id=\"myModal"+ (i+1) +"\" style=\"overflow: hidden;\" class=\"modal\">"+
   "<span class=\"close cursor\" onclick=\"closeModal()\">&times;</span>"+
   "<div class=\"modal-content\" id=\"modal-content"+i+"\">";
 
@@ -170,6 +176,18 @@ function fill_html(){
       "<div class=\"mySlides dog_"+ (i+1) + "\">"+
         "<div class=\"numbertext\">"+(j+1)+ "/"+ dogs_array[i].images.length + "</div>"+
         "<img src="+ dogs_array[i].images[j] +" style=\"width:100%\">"+
+      "</div>";
+
+    }
+
+    if(dogs_array[i].videos.length > 0)
+    for(var j = 0; j < dogs_array[i].videos.length; j++){
+      document.getElementById("modal-content"+i).innerHTML +=
+      "<div class=\"mySlides dog_"+ (i+1) + "\">"+
+        "<div class=\"numbertext\">"+(j+1)+ "/"+ dogs_array[i].videos.length + "</div>"+
+        "<video width=\"100%\" height=\"100%\" controls>"+
+        "<source src=\""+dogs_array[i].videos[j]+"\" type=\"video/mp4\">"+
+        "</video>"+
       "</div>";
 
     }

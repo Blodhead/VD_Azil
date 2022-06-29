@@ -15,6 +15,7 @@ function initialize(){
             weight: "500g",
             breed: "Parakeet",
             images:["../images/birds/Julie1.PNG", "../images/birds/Julie2.PNG"],
+            videos:[],
             description: "Julie is a budgie, or budgerigar, who is looking for her new forever home. She prefers the company of other birds, so she would do best in an aviary situation or in a patient home that is willing to work her and a buddy.",
             displayed:true  
           },
@@ -24,6 +25,7 @@ function initialize(){
             weight: "300g",
             breed: "Parakeet",
             images:["../images/birds/Rori1.JPG","../images/birds/Rori2.JPG","../images/birds/Rori3.JPG"],
+            videos:[],
             description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. ",
             displayed:true
           },
@@ -33,6 +35,7 @@ function initialize(){
             weight: "1kg",
             breed: "Macaw",
             images:["../images/birds/Poli1.PNG","../images/birds/Poli2.PNG","../images/birds/Poli3.PNG","../images/birds/Poli4.PNG"],
+            videos:[],
             description: "Poli is friendly, chatty, and social. She is shy meeting new people but once she considers you a friend, Poli wants to be the center of attention. Poli would do best in a home who wants a buddy to do everything with.",
             displayed:true
           },
@@ -42,6 +45,7 @@ function initialize(){
             weight: "300g",
             breed: "Parakeet",
             images:["../images/birds/Set1.PNG","../images/birds/Set2.PNG"],
+            videos:["../images/dogs/boni.mp4"],
             description: "Neptune is a little shy around people, and more interested in interacting with her mate, Saturn. The pair would likely do best in an aviary setting with lots of space, and could potentially do well with other birds. ",
 
           },
@@ -51,6 +55,7 @@ function initialize(){
             weight: "200g",
             breed: "Parakeet",
             images:["../images/birds/Loli1.PNG"],
+            videos:[],
             description: "Loli is still getting comfortable around people, and definitely has a curious side. He is used to living with other birds, but can be a little more timid.",
             displayed:true
           },
@@ -60,6 +65,7 @@ function initialize(){
             weight: "1kg",
             breed: "Macaw",
             images:["../images/birds/Voki1.PNG","../images/birds/Voki2.PNG"],
+            videos:[],
             description: "Voki is beautiful hybrid Macaw who we are still getting to know. She is very curious and eager to interact with us but is still building her confidence. Lola would do best in a home willing to go at her pace.",
             displayed:true
           },
@@ -69,6 +75,7 @@ function initialize(){
             weight: "300g",
             breed: "Parakeet",
             images:["../images/birds/Rori1.JPG","../images/birds/Rori2.JPG","../images/birds/Rori3.JPG"],
+            videos:[],
             description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. ",
             displayed:true
           },
@@ -168,7 +175,7 @@ function fill_html(){
     "</div>"+
   "</section>"+
 
-  "<div id=\"myModal"+ (i+1) +"\" class=\"modal\">"+
+  "<div id=\"myModal"+ (i+1) +"\" style=\"overflow: hidden;\" class=\"modal\">"+
     "<span class=\"close cursor\" onclick=\"closeModal()\">&times;</span>"+
     "<div class=\"modal-content\" id=\"modal-content"+i+"\">";
   
@@ -181,6 +188,18 @@ function fill_html(){
           "<img src="+ dogs_array[i].images[j] +" style=\"width:100%\">"+
         "</div>";
 
+      }
+
+      if(dogs_array[i].videos.length > 0)
+      for(var j = 0; j < dogs_array[i].videos.length; j++){
+        document.getElementById("modal-content"+i).innerHTML +=
+        "<div class=\"mySlides dog_"+ (i+1) + "\">"+
+          "<div class=\"numbertext\">"+(j+1)+ "/"+ dogs_array[i].videos.length + "</div>"+
+          "<video width=\"100%\" height=\"100%\" controls>"+
+          "<source src=\""+dogs_array[i].videos[j]+"\" type=\"video/mp4\">"+
+          "</video>"+
+        "</div>";
+  
       }
 
       document.getElementById("modal-content"+i).innerHTML +=
