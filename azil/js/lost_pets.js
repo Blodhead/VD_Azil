@@ -1,4 +1,3 @@
-document.onload = initialize();
 
 var pet_array;
 
@@ -16,6 +15,17 @@ function addDog(name_,age_,weight_,desc_){
 }
 
 function initialize(){
+
+    document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
+    document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
+  
+    document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
+    document.getElementById('flip-card').classList.toggle('do-flip');
+    };
+  
+    document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
+    document.getElementById('flip-card').classList.toggle('do-flip');
+    };
 
     let pet = localStorage.getItem("pet");
     if(pet != null){
