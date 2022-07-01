@@ -229,6 +229,8 @@ html * {
 
 .u-section-1 .u-text-6 {
   margin: 20px 0 0 225px;
+  min-height: 76px;
+  text-align: left;
 }
 
 .u-section-1 .u-btn-3 {

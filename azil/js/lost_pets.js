@@ -1,20 +1,123 @@
 
-var pet_array;
+var lost_animals;
+function initialize(){
 
-function addDog(name_,age_,weight_,desc_){
-    pet_array.push(
-    {
-        name: name_,
-        age: age_,
-        weight: weight_,
-        description: desc_
-    });
+    localStorage.removeItem("lost"); //delete before presentation
+    let animal = localStorage.getItem("lost");
+    if(animal != null){
+        lost_animals = JSON.parse(animal);
+    }else{
+      /* Ovde dodavati podatke */
+        lost_animals = [
+          {
+            post_name: "Julie",
+            text: "If you find french buldog in Cerak. His name is Max. There is a reward!",
+            number:"0613978897",
+            comments: ["500g","dewdwfq"]
+          },
+          {
+            post_name: "Buli",
+            text: "A bichon Lora, she has 7 months, last seen at Palilula. Please call if you have any info.",
+            number:"0646032298",
+            comments: ["500g","dewdwfq"]
+          },
+          {
+            post_name: "Nuli",
+            text: "Please call on 0613978897 if you find french buldog in Cerak. His name is Max. Reward!",
+            number:"0613978897",
+            comments: ["500g","dewdwfq"]
+          }
+        
+        ];
+        localStorage.setItem("lost",JSON.stringify(lost_animals));
+    }
 
-    localStorage.setItem("pet", JSON.stringify(pet_array));
+    fill_html();
 
 }
 
-function initialize(){
+function fill_html(){
+
+    for(var i = 0; i < lost_animals.length; i++){
+
+        document.getElementById("context").innerHTML += 
+       "<div id="+i+" class=\"u-align-left-xs u-blog-post u-container-style u-repeater-item\">"+
+
+
+       "<div class=\"flip-card-3D-wrapper\">"+
+         "<div id=\"flip-card\">"+
+           "<div id=\"front1\" class=\"flip-card-front shadow-1 oval\">"+
+              
+             "<p><div class=\"u-align-left-xs u-blog-post u-container-style u-repeater-item oval u-white\">"+
+             "<div class=\"u-container-layout u-similar-container u-valign-bottom-lg u-valign-top-xl u-container-layout-3\">"+
+                
+                 "<img class=\"u-blog-control u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3 shadow-1 enlarge\" src=\"../images/Maks2.jpg\">"+
+                
+               "<h4 class=\"u-align-left-lg u-align-left-md u-align-left-sm u-blog-control u-text u-text-5\">"+
+                 lost_animals[i].post_name+
+               "</h4>"+
+               "<div class=\"u-blog-control u-metadata u-text-grey-40 u-metadata-3\">"+
+                 "<span class=\"u-meta-date u-meta-icon\">Thu Jun 23 2022</span>"+
+                 "<span class=\"u-meta-comments u-meta-icon\">Call: "+lost_animals[i].number+"</span>"+
+               "</div>"+
+               "<div class=\"u-align-left-lg u-align-left-md u-align-left-sm u-blog-control u-post-content u-text u-text-6\">"+ lost_animals[i].text +"</div>"+
+               "<button id=\"flip-card-btn-turn-to-back\" class=\"u-blog-control u-btn u-button-style u-btn-3\">Comment</button>"+
+             "</div>"+
+           "</div>"+
+             "</p></div>"+
+           "<div id=\"back1\" class=\"flip-card-back shadow-1 oval\"><p>"+
+              
+
+             "<div class=\"card-footer py-3 border-0 oval\" style=\"background-color: #f8f9fa;\">"+
+               "<div class=\"d-flex flex-start w-100\">"+
+                 "<div class=\"form-outline w-100\">"+
+
+                   "<div class=\"com\">"+
+                     "<div class=\"comment-section\">"+
+                        "<div class=\"comment\">"+
+                           "This is first comment."+
+                        "</div>"+
+
+                     "</div>"+
+                   "</div>"+
+
+                   "<textarea class=\"form-control\" placeholder=\"Leave a comment...\" id=\"textAreaExample\" style=\"  height: 65px; width: 500px;\" rows=\"4\" style=\"background: #fff;\"></textarea>"+
+                 "</div>"+
+               "</div>"+
+               "<div class=\"float-end mt-2 pt-1\">"+
+                 "<button type=\"button\" class=\"btn btn-primary btn-sm\">Post</button>"+
+                 "<button id=\"flip-card-btn-turn-to-front\" style=\"background-color: gray;\">Cancel</button>"+
+               "</div>"+
+             "</div>"+
+
+
+
+           "</p></div>"+
+         "</div>"+
+         "</div>"+
+        
+
+     "</div>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
+
+
+
+
 
     document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
     document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
@@ -26,21 +129,4 @@ function initialize(){
     document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
     document.getElementById('flip-card').classList.toggle('do-flip');
     };
-
-    let pet = localStorage.getItem("pet");
-    if(pet != null){
-        pet_array = JSON.parse(pet);
-    }else{
-        pet_array = [
-            {
-                name: "_",
-                description: "_",
-                contact: "_",
-                comment: "_"
-            }
-        
-        ];
-        localStorage.setItem("pet",JSON.stringify(pet_array));
-    }
-
 }
