@@ -30,6 +30,7 @@ html * {
   overflow-y: scroll;
 }
 .comment{
+  text-align: left;
   height: 10%;
   padding: 2%;
   margin: 2px;
@@ -55,7 +56,7 @@ html * {
   perspective: 900px;
   margin: 0 auto;
 }
-#flip-card {
+.flip-card {
   width: 100%;
   height: 100%;
   text-align: center;
@@ -75,14 +76,14 @@ html * {
   -ms-transform: rotateY(-180deg);
   transform: rotateY(-180deg);
 }
-#flip-card-btn-turn-to-back, #flip-card-btn-turn-to-front {
+.flip-card-btn-turn-to-back, .flip-card-btn-turn-to-front {
 
   background-color: #478ac9;
   color: #ffffff;
   cursor: pointer;
 
 }
-#flip-card .flip-card-back{
+.flip-card .flip-card-back{
   max-width: 100%;
   position: absolute;
   -o-backface-visibility: hidden;
@@ -95,7 +96,7 @@ html * {
   box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
 }
 
-#flip-card .flip-card-front{
+.flip-card .flip-card-front{
 
   position: absolute;
   -o-backface-visibility: hidden;
@@ -107,11 +108,11 @@ html * {
   -moz-box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
   box-shadow: 5px 6px 32px 2px rgba(133,133,133,0.71);
 }
-#flip-card .flip-card-front {
+.flip-card .flip-card-front {
 
     border:1px solid grey;
 }
-#flip-card .flip-card-back {
+.flip-card .flip-card-back {
 
     border: 1px solid grey;
     -o-transform: rotateY(180deg);
@@ -119,7 +120,7 @@ html * {
     -ms-transform: rotateY(180deg);
     transform: rotateY(180deg);
 }
-#flip-card .flip-card-front p, #flip-card .flip-card-back p {
+.flip-card .flip-card-front p, .flip-card .flip-card-back p {
   color: grey;
   display: block;
   position: absolute;

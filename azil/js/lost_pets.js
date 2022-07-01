@@ -13,19 +13,22 @@ function initialize(){
             post_name: "Julie",
             text: "If you find french buldog in Cerak. His name is Max. There is a reward!",
             number:"0613978897",
-            comments: ["500g","dewdwfq"]
+            comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
+            post_owner:"Slavisa"
           },
           {
             post_name: "Buli",
             text: "A bichon Lora, she has 7 months, last seen at Palilula. Please call if you have any info.",
             number:"0646032298",
-            comments: ["500g","dewdwfq"]
+            comments: ["500g","dewdwfq",",[pp[,[pp"],
+            post_owner:"Slavisa"
           },
           {
             post_name: "Nuli",
             text: "Please call on 0613978897 if you find french buldog in Cerak. His name is Max. Reward!",
             number:"0613978897",
-            comments: ["500g","dewdwfq"]
+            comments: ["500g","dewdwfq"],
+            post_owner:"Slavisa"
           }
         
         ];
@@ -45,8 +48,8 @@ function fill_html(){
 
 
        "<div class=\"flip-card-3D-wrapper\">"+
-         "<div id=\"flip-card\">"+
-           "<div id=\"front1\" class=\"flip-card-front shadow-1 oval\">"+
+         "<div id=\"flip-card"+i+"\" class=\"flip-card\">"+
+           "<div id=\"front"+i+"\" class=\"flip-card-front shadow-1 oval\">"+
               
              "<p><div class=\"u-align-left-xs u-blog-post u-container-style u-repeater-item oval u-white\">"+
              "<div class=\"u-container-layout u-similar-container u-valign-bottom-lg u-valign-top-xl u-container-layout-3\">"+
@@ -61,11 +64,11 @@ function fill_html(){
                  "<span class=\"u-meta-comments u-meta-icon\">Call: "+lost_animals[i].number+"</span>"+
                "</div>"+
                "<div class=\"u-align-left-lg u-align-left-md u-align-left-sm u-blog-control u-post-content u-text u-text-6\">"+ lost_animals[i].text +"</div>"+
-               "<button id=\"flip-card-btn-turn-to-back\" class=\"u-blog-control u-btn u-button-style u-btn-3\">Comment</button>"+
+               "<button id=\"flip-card-btn-turn-to-back"+i+"\" class=\"flip-card-btn-turn-to-back u-blog-control u-btn u-button-style u-btn-3\">Comment</button>"+
              "</div>"+
            "</div>"+
              "</p></div>"+
-           "<div id=\"back1\" class=\"flip-card-back shadow-1 oval\"><p>"+
+           "<div id=\"back\" class=\"flip-card-back shadow-1 oval\"><p>"+
               
 
              "<div class=\"card-footer py-3 border-0 oval\" style=\"background-color: #f8f9fa;\">"+
@@ -73,11 +76,7 @@ function fill_html(){
                  "<div class=\"form-outline w-100\">"+
 
                    "<div class=\"com\">"+
-                     "<div class=\"comment-section\">"+
-                        "<div class=\"comment\">"+
-                           "This is first comment."+
-                        "</div>"+
-
+                     "<div id=\"com"+i+"\"class=\"comment-section\">"+
                      "</div>"+
                    "</div>"+
 
@@ -86,7 +85,7 @@ function fill_html(){
                "</div>"+
                "<div class=\"float-end mt-2 pt-1\">"+
                  "<button type=\"button\" class=\"btn btn-primary btn-sm\">Post</button>"+
-                 "<button id=\"flip-card-btn-turn-to-front\" style=\"background-color: gray;\">Cancel</button>"+
+                 "<button id=\"flip-card-btn-turn-to-front"+i+"\" class=\"flip-card-btn-turn-to-front\" style=\"background-color: gray;\">Cancel</button>"+
                "</div>"+
              "</div>"+
 
@@ -99,34 +98,30 @@ function fill_html(){
 
      "</div>";
 
-
-
-
-
-
-
-
-
-
-
-
-
+     for(var j = 0; j < lost_animals[i].comments.length; j++){
+        document.getElementById("com"+i).innerHTML+=
+        "<div id=\"com_id"+i+""+j+ "\" class=\"comment\">"+
+           lost_animals[i].comments[j]+
+        "</div>";
+        } 
+     
 
 
     }
 
+    for(var i = 0; i < lost_animals.length; i++){
+        document.getElementById("flip-card-btn-turn-to-back"+i).style.visibility = 'visible';
+        document.getElementById("flip-card-btn-turn-to-front"+i).style.visibility = 'visible';
 
+        document.getElementById("flip-card-btn-turn-to-back"+i).onclick = function(i) {
+            var curr_elem = ((i.currentTarget).id).slice(-1);
+        document.getElementById("flip-card"+curr_elem).classList.toggle("do-flip");
+        };
 
+        document.getElementById("flip-card-btn-turn-to-front"+i).onclick = function(i) {
+            var curr_elem = ((i.currentTarget).id).slice(-1);
+        document.getElementById("flip-card"+curr_elem).classList.toggle("do-flip");
+        };
+    }
 
-
-    document.getElementById('flip-card-btn-turn-to-back').style.visibility = 'visible';
-    document.getElementById('flip-card-btn-turn-to-front').style.visibility = 'visible';
-  
-    document.getElementById('flip-card-btn-turn-to-back').onclick = function() {
-    document.getElementById('flip-card').classList.toggle('do-flip');
-    };
-  
-    document.getElementById('flip-card-btn-turn-to-front').onclick = function() {
-    document.getElementById('flip-card').classList.toggle('do-flip');
-    };
 }
