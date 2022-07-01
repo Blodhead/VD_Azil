@@ -29,7 +29,22 @@ function initialize(){
             number:"0613978897",
             comments: ["500g","dewdwfq"],
             post_owner:"Slavisa"
-          }
+          },          {
+            post_name: "Julie",
+            text: "If you find french buldog in Cerak. His name is Max. There is a reward!",
+            number:"0613978897",
+            comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
+            post_owner:"Slavisa"
+          },
+          {
+            post_name: "Buli",
+            text: "A bichon Lora, she has 7 months, last seen at Palilula. Please call if you have any info.",
+            number:"0646032298",
+            comments: ["500g","dewdwfq",",[pp[,[pp"],
+            post_owner:"Slavisa"
+          },
+          
+
         
         ];
         localStorage.setItem("lost",JSON.stringify(lost_animals));
@@ -105,7 +120,10 @@ function fill_html(){
         "</div>";
         } 
      
-
+        if(i%2 || (i+1)==lost_animals.length)
+        document.getElementById("context").innerHTML +=
+        "<div style=\"margin-top:150px\">&nbsp</div>"+
+        "<div style=\"margin-top:150px\">&nbsp</div>";
 
     }
 
