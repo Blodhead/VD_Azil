@@ -95,11 +95,11 @@ function fill_html(){
                      "</div>"+
                    "</div>"+
 
-                   "<textarea class=\"form-control\" placeholder=\"Leave a comment...\" id=\"textAreaExample\" style=\"  height: 65px; width: 500px;\" rows=\"4\" style=\"background: #fff;\"></textarea>"+
+                   "<textarea class=\"form-control\" placeholder=\"Leave a comment...\" id=\"textAreaExample"+i+"\" style=\"  height: 65px; width: 500px;\" rows=\"4\" style=\"background: #fff;\"></textarea>"+
                  "</div>"+
                "</div>"+
                "<div class=\"float-end mt-2 pt-1\">"+
-                 "<button type=\"button\" class=\"btn btn-primary btn-sm\">Post</button>"+
+                 "<button id=\"c"+i+"\" type=\"button\" class=\"btn btn-primary btn-sm\" onclick=\"post_comment(this)\">Post</button>"+
                  "<button id=\"flip-card-btn-turn-to-front"+i+"\" class=\"flip-card-btn-turn-to-front\" style=\"background-color: gray;\">Cancel</button>"+
                "</div>"+
              "</div>"+
@@ -142,4 +142,15 @@ function fill_html(){
         };
     }
 
+}
+
+function post_comment(obj){
+
+var i = obj.id.slice(-1);
+
+document.getElementById("com"+i).innerHTML+=
+"<div id=\"com_id"+i+""+lost_animals[i].comments.length+ "\" class=\"comment\">"+
+   document.getElementById("textAreaExample"+i).value+
+"</div>";
+lost_animals[i].comments.push(document.getElementById("textAreaExample"+i).value);
 }
