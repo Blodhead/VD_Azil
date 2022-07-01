@@ -22,6 +22,7 @@ html * {
 }
 
 .comment-section{
+  border-style: dotted;
   max-height: 172px;
   max-width: 100%;
   margin-bottom: 20px;
@@ -31,7 +32,7 @@ html * {
 .comment{
   height: 10%;
   padding: 2%;
-  margin: 2%;
+  margin: 2px;
   background-color: #ffff;
   color: black;
 }
