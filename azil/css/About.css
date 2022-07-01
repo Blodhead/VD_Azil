@@ -6,8 +6,9 @@
   }
 .u-body{
   background: url("../images/poz6.jpg");
-  background-repeat: no-repeat;
   background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .u-section-1 .u-layout-wrap-1 {

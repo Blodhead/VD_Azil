@@ -12,6 +12,30 @@ html * {
   box-shadow: 5px 5px 5px black !important;
 }
 
+
+.com{
+  padding: 0%;
+  margin-bottom: 132px;
+  display: block;
+  height: 50px;
+  width: 500px;
+}
+
+.comment-section{
+  max-height: 172px;
+  max-width: 100%;
+  margin-bottom: 20px;
+  background-color: #3f3f3f;
+  overflow-y: scroll;
+}
+.comment{
+  height: 10%;
+  padding: 2%;
+  margin: 2%;
+  background-color: #ffff;
+  color: black;
+}
+
 .enlarge:hover {
   transform: scale(1.10);
 }
@@ -58,8 +82,7 @@ html * {
 
 }
 #flip-card .flip-card-back{
-  width: 100%;
-  height: 100%;
+  max-width: 100%;
   position: absolute;
   -o-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;

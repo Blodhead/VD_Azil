@@ -110,17 +110,40 @@
                 <div class="flip-card-back shadow-1 oval"><p>
                   
 
-                  <div class="card-footer py-3 border-0" style="background-color: #f8f9fa;">
+                  <div class="card-footer py-3 border-0 oval" style="background-color: #f8f9fa;">
                     <div class="d-flex flex-start w-100">
                       <div class="form-outline w-100">
-                        <textarea class="form-control" id="textAreaExample" rows="4"
+
+                        <div class="com">
+                          <div class="comment-section">
+                             <div class="comment">
+                               This is first comment.
+                             </div>
+                             <div class="comment">
+                               This is second comment.
+                              </div>
+                              <div class="comment">
+                                This is third comment.
+                              </div>
+                              <div class="comment">
+                                This is fourth comment.
+                              </div>
+                              <div class="comment">
+                                This is fifth comment.
+                              </div>
+                              <div class="comment">
+                                This is sixth comment.
+                              </div>
+                          </div>
+                        </div>
+
+                        <textarea class="form-control" id="textAreaExample" style="  height: 65px; width: 500px;" rows="4"
                           style="background: #fff;"></textarea>
-                        <label class="form-label" for="textAreaExample">Message</label>
                       </div>
                     </div>
                     <div class="float-end mt-2 pt-1">
-                      <button type="button" class="btn btn-primary btn-sm">Post comment</button>
-                      <button id="flip-card-btn-turn-to-front">flip</button>
+                      <button type="button" class="btn btn-primary btn-sm">Post</button>
+                      <button id="flip-card-btn-turn-to-front" style="background-color: gray;" onclick="cancel()">Cancel</button>
                     </div>
                   </div>
 

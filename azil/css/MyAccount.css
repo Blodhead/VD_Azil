@@ -22,7 +22,8 @@
 
   .u-body{
     background: url("../images/poz4.jpg");
-    background-repeat: no-repeat;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
   }
   
