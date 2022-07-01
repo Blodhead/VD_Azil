@@ -144,7 +144,7 @@ html * {
 
 .u-section-1 .u-repeater-1 {
   grid-template-columns: calc(50% - 11px) calc(50% - 11px);
-  grid-gap: 22px 22px;
+  grid-gap: 90px 22px;
   min-height: 607px;
 }
 
