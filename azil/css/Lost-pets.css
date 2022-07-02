@@ -29,6 +29,13 @@ html * {
   background-color: #3f3f3f;
   overflow-y: scroll;
 }
+
+#table{
+  width: 50%;
+  /* align-content: end; */
+  margin-left: 45%;
+}
+
 .comment{
   text-align: left;
   height: 10%;

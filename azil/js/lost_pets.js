@@ -110,8 +110,12 @@ function fill_html(){
                  "<span class=\"u-meta-comments u-meta-icon\">Call: "+lost_animals[i].number+"</span>"+
                "</div>"+
                "<div class=\"u-align-left-lg u-align-left-md u-align-left-sm u-blog-control u-post-content u-text u-text-6\">"+ lost_animals[i].text +"</div>"+
-               "<button id=\"flip-card-btn-turn-to-back"+i+"\" class=\"flip-card-btn-turn-to-back u-blog-control u-btn u-button-style u-btn-3\">Comment</button>"+
-             "</div>"+
+               "<table id=\"table\"> <tr><td>"+
+               "<button id=\"flip-card-btn-turn-to-back"+i+"\" class=\"flip-card-btn-turn-to-back u-blog-control u-btn u-button-style\">Comment</button>"+
+               "</td><td>"+
+               "<button id=\"flip-card-btn-turn-to-back"+i+"\" class=\"u-blog-control u-btn u-button-style\" onclick=\"toPDF("+i+")\">to PDF</button>"+
+              "</td></tr></table>"+
+            "</div>"+
            "</div>"+
              "</p></div>"+
            "<div id=\"back\" class=\"flip-card-back shadow-1 oval\"><p>"+
@@ -187,7 +191,7 @@ lost_animals[i].comments.push(document.getElementById("textAreaExample"+i).value
 }
 
 
-function getPDF(){
+function toPDF(i){
   var doc = new jsPDF();
 
   doc.text(20, 20, 'Hello world!');
