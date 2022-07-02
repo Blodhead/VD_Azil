@@ -2,7 +2,6 @@
 var lost_animals;
 function initialize(){
   
-    //localStorage.clear("lost"); //samo za resetovanje baze
     let animal = localStorage.getItem("lost");
     if(animal != null){
         lost_animals = JSON.parse(animal);
@@ -185,4 +184,19 @@ document.getElementById("com"+i).innerHTML+=
    document.getElementById("textAreaExample"+i).value+
 "</div>";
 lost_animals[i].comments.push(document.getElementById("textAreaExample"+i).value);
+}
+
+
+function getPDF(){
+  var doc = new jsPDF();
+
+  doc.text(20, 20, 'Hello world!');
+  doc.text(20, 30, 'This is client-side Javascript to generate a PDF.');
+  
+  // Add new page
+  doc.addPage();
+  doc.text(20, 20, 'Visit CodexWorld.com');
+  
+  // Save the PDF
+  doc.save('document.pdf');
 }
