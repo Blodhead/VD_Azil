@@ -194,12 +194,13 @@ lost_animals[i].comments.push(document.getElementById("textAreaExample"+i).value
 function toPDF(i){
   var doc = new jsPDF();
 
-  doc.text(20, 20, 'Hello world!');
-  doc.text(20, 30, 'This is client-side Javascript to generate a PDF.');
+  doc.text(30, 10, lost_animals[i].picture);
+  doc.text(20, 30, ("Name: " + lost_animals[i].post_name));
+  doc.text(20, 40, ("Call: " + lost_animals[i].number));
+  doc.text(20, 50, lost_animals[i].text);
   
   // Add new page
   doc.addPage();
-  doc.text(20, 20, 'Visit CodexWorld.com');
   
   // Save the PDF
   doc.save('document.pdf');
