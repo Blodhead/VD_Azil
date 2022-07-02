@@ -1,7 +1,7 @@
 
 var lost_animals;
 function initialize(){
-
+  
     localStorage.removeItem("lost"); //delete before presentation
     let animal = localStorage.getItem("lost");
     if(animal != null){
@@ -47,6 +47,31 @@ function initialize(){
 
         
         ];
+
+        var load = localStorage.getItem("load_lost");
+        if(load!=null){
+          var load_lost = localStorage.getItem("load_lost");
+          var load = JSON.parse(load_lost);
+    
+          var temp=[{
+            post_name: "",
+            text: "",
+            number:"",
+            comments: [],
+            post_owner:""
+          }];
+    
+          temp[0].post_name= load[0].post_name;
+          temp[0].text= load[0].text;
+          temp[0].number=load[0].number;
+          temp[0].comments = [];
+          temp[0].post_owner=load[0].owner;
+    
+          lost_animals.push(temp[0]);
+          localStorage.removeItem("load_lost");
+        } 
+
+
         localStorage.setItem("lost",JSON.stringify(lost_animals));
     }
 
