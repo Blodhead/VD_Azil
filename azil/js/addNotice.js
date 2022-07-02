@@ -18,5 +18,7 @@ function collectInfo(){
 
     localStorage.setItem("load_lost",JSON.stringify(dump));
     
+    alert("Notice added!");
+
     location.href= location.href.replace("Add-Notice", "Lost-pets");
 }
