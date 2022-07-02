@@ -2,7 +2,7 @@
 var lost_animals;
 function initialize(){
   
-    
+    //localStorage.clear("lost"); //samo za resetovanje baze
     let animal = localStorage.getItem("lost");
     if(animal != null){
         lost_animals = JSON.parse(animal);
@@ -10,16 +10,18 @@ function initialize(){
       /* Ovde dodavati podatke */
         lost_animals = [
           {
-            post_name: "Julie",
-            text: "If you find french buldog in Cerak. His name is Max. There is a reward!",
+            post_name: "Dzaja",
+            text: "If you find a domestic cat in New Belgrade. He responds to name Dzaja. There is a reward!",
             number:"0613978897",
+            picture:"../images/lost/Dzaja.jpg",
             comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
-            post_owner:"Slavisa"
+            post_owner:"Milos"
           },
           {
-            post_name: "Buli",
-            text: "A bichon Lora, she has 7 months, last seen at Palilula. Please call if you have any info.",
+            post_name: "Jura",
+            text: "A bichon Jura, she has 7 months, last seen at Palilula. Please call if you have any info.",
             number:"0646032298",
+            picture:"../images/lost/Jura.jpg",
             comments: ["500g","dewdwfq",",[pp[,[pp"],
             post_owner:"Slavisa"
           },
@@ -27,12 +29,14 @@ function initialize(){
             post_name: "Nuli",
             text: "Please call on 0613978897 if you find french buldog in Cerak. His name is Max. Reward!",
             number:"0613978897",
+            picture:"../images/lost/Koki.jpg",
             comments: ["500g","dewdwfq"],
             post_owner:"Slavisa"
           },          {
             post_name: "Julie",
             text: "If you find french buldog in Cerak. His name is Max. There is a reward!",
             number:"0613978897",
+            picture:"../images/lost/Mica.PNG",
             comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
             post_owner:"Slavisa"
           },
@@ -40,6 +44,7 @@ function initialize(){
             post_name: "Buli",
             text: "A bichon Lora, she has 7 months, last seen at Palilula. Please call if you have any info.",
             number:"0646032298",
+            picture:"../images/lost/Piksi.jpg",
             comments: ["500g","dewdwfq",",[pp[,[pp"],
             post_owner:"Slavisa"
           },
@@ -58,6 +63,7 @@ function initialize(){
         post_name: "",
         text: "",
         number:"",
+        picture:"",
         comments: [],
         post_owner:""
       }];
@@ -65,6 +71,7 @@ function initialize(){
       temp[0].post_name= load[0].post_name;
       temp[0].text= load[0].text;
       temp[0].number=load[0].number;
+      temp[0].picture="../images/lost/"+load[0].picture;
       temp[0].comments = [];
       temp[0].post_owner=load[0].owner;
 
@@ -94,7 +101,7 @@ function fill_html(){
              "<p><div class=\"u-align-left-xs u-blog-post u-container-style u-repeater-item oval u-white\">"+
              "<div class=\"u-container-layout u-similar-container u-valign-bottom-lg u-valign-top-xl u-container-layout-3\">"+
                 
-                 "<img class=\"u-blog-control u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3 shadow-1 enlarge\" src=\"../images/Maks2.jpg\">"+
+                 "<img class=\"u-blog-control u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-3 shadow-1 enlarge\" src=\""+ lost_animals[i].picture +"\">"+
                 
                "<h4 class=\"u-align-left-lg u-align-left-md u-align-left-sm u-blog-control u-text u-text-5\">"+
                  lost_animals[i].post_name+
