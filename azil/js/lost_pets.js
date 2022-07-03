@@ -87,6 +87,7 @@ function initialize(){
       for(var j = 0; j < del.length; j++){
         var com = del[j].charAt(del[j].length-1);
         var post = del[j].charAt(del[j].length-2);
+        if(lost_animals[Number(post)] != null)
         lost_animals[Number(post)].comments[Number(com)-1] = null;
       }
       for(var f = 0; f < lost_animals.length; f++)

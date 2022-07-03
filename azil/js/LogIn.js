@@ -165,7 +165,7 @@ function removeComment(){
 
     localStorage.setItem("users",JSON.stringify(users));
 
-    var del = localStorage.getItem("comments_to_delete");
+    var del = JSON.parse(localStorage.getItem("comments_to_delete"));
 
     var del_Arr=[];
 
@@ -191,7 +191,29 @@ localStorage.setItem("users",JSON.stringify(users));
 function removePost(i){
 
     var lost = JSON.parse(localStorage.getItem("lost"));
+    var del = JSON.parse(localStorage.getItem("comments_to_delete"));
 
+    var kor = JSON.parse(localStorage.getItem("users"));
+    var tren = localStorage.getItem("current_user");
+    var l = 0;
+
+while(kor[l].username != tren){l++;};
+
+    for(var x = lost[i].comments.length-1; x >= 0; x--){
+        if(del != null)
+            for(var y = del.length; y >= 0; y--){
+
+                if(lost[i].comments[x] == del[y]) del.splice(y,1);
+
+            }
+        if(users[l].comments != null)
+            for(var y = users[l].comments.length-1; y >= 0; y--){
+                if(lost[i].comments[x] == users[l].comments[y]) users[l].comments.splice(y,1);
+            }
+
+    }
+    localStorage.setItem("comments_to_delete",JSON.stringify(del));
+    localStorage.setItem("users",JSON.stringify(users));
     lost.splice(i,1);
     localStorage.setItem("lost",JSON.stringify(lost));
     document.location.reload();
