@@ -9,7 +9,7 @@ function initialize(){
     document.getElementById("addnotice").style.display="inline-block";
 }
 
-    localStorage.removeItem("birds"); //delete before presentation
+    //localStorage.removeItem("birds"); //delete before presentation
     let dogs = localStorage.getItem("birds");
     if(dogs != null){
         dogs_array = JSON.parse(dogs);
@@ -89,7 +89,7 @@ function initialize(){
 
         
         ];
-        localStorage.setItem("dogs",JSON.stringify(dogs_array));
+        localStorage.setItem("birds",JSON.stringify(dogs_array));
     }
 
     fill_html();

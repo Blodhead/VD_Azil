@@ -6,6 +6,7 @@ function initialize(){
         document.getElementById("addnotice").style.display="none";
     }else{
         document.getElementById("addnotice").style.display="inline-block";
+        fill_page();
     }
 
     var val = localStorage.getItem("users");
@@ -46,4 +47,7 @@ function checkUser(){
     }else{
         alert("No such user!");
     }
+}
+function fill_page(){
+  document.getElementById("contis").innerHTML="";
 }
