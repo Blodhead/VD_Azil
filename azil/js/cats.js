@@ -2,6 +2,14 @@
 var dogs_array;
 
 function initialize(){
+
+  if(localStorage.getItem("current_user") == null){
+    document.getElementById("addnotice").style.display="none";
+}else{
+    document.getElementById("addnotice").style.display="inline-block";
+}
+
+
   localStorage.removeItem("cats"); //delete before presentation
     let dogs = localStorage.getItem("cats");
     if(dogs != null){

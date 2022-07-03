@@ -2,7 +2,12 @@
 var dogs_array;
 
 function initialize(){
-  localStorage.removeItem("dogs"); //delete before presentation
+  if(localStorage.getItem("current_user") == null){
+    document.getElementById("addnotice").style.display="none";
+}else{
+    document.getElementById("addnotice").style.display="inline-block";
+}
+  //localStorage.removeItem("dogs"); //delete before presentation
     let dogs = localStorage.getItem("dogs");
     if(dogs != null){
         dogs_array = JSON.parse(dogs);

@@ -1,5 +1,13 @@
 var users;
 function initialize(){
+    //localStorage.clear("current_user");
+
+    if(localStorage.getItem("current_user") == null){
+        document.getElementById("addnotice").style.display="none";
+    }else{
+        document.getElementById("addnotice").style.display="inline-block";
+    }
+
     var val = localStorage.getItem("users");
     if(val != null){users = JSON.parse(val); return;}
     users=[
