@@ -1,6 +1,7 @@
 
 var lost_animals;
 function initialize(){
+  
   if(localStorage.getItem("current_user") == null){
     document.getElementById("addnotice").style.display="none";
 }else{
@@ -184,7 +185,10 @@ function fill_html(){
 }
 
 function post_comment(obj){
-
+  if(localStorage.getItem("current_user") == null){
+    alert("You must be logged so that you can comment!");
+    return;
+}
 var i = obj.id.slice(-1);
 
 document.getElementById("com"+i).innerHTML+=
