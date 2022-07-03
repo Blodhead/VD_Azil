@@ -1,4 +1,5 @@
 var users;
+var load_lost;
 function initialize(){
     //localStorage.clear("current_user");
 
@@ -14,11 +15,13 @@ function initialize(){
     users=[
         {
             username: "Milos",
-            password:"123456"
+            password:"123456",
+            comments:[]
         },
         {
             username: "Maja",
-            password:"123456"
+            password:"123456",
+            comments:[]
         }
     ];
     localStorage.setItem("users",JSON.stringify(users));
@@ -50,4 +53,57 @@ function checkUser(){
 }
 function fill_page(){
   document.getElementById("contis").innerHTML="";
+
+  var load_lost = localStorage.getItem("lost");
+  var load = JSON.parse(load_lost);
+
+  document.getElementById("contis").innerHTML+=
+  "<div class=\"container\">"+
+
+    "<div class=\"row\">"+
+
+
+        "<div class=\"col-6 posts\">"+
+            "<div id=\"prostor\" class=\"container\">"+
+
+            "</div>"+
+        "</div>"+
+
+
+
+
+
+
+
+        "<div class=\"col-6 comments\">"+
+            "<div class=\"container\">"+
+
+                "<div class=\"row\">"+
+                "</div>"+
+            
+            "</div>"+
+        "</div>"+
+    "</div>"+
+
+
+    "</div>";
+
+    for(var i = 0; i < load.length; i++){
+        if(load[i].post_owner == localStorage.getItem("current_user"))
+    document.getElementById("prostor").innerHTML+=
+        "<div class=\"row\" style=\"margin-top:20px\">"+
+                    "<div class=\"col-12\">"+
+                        "<div class=\"jumbotron\">"+
+                            "<h1 class=\"display-4\"><img style=\"max-width:100%\" src="+ load[i].picture +"></h1>"+
+                            "<p class=\"lead\">"+ load[i].post_name +"</p>"+
+                            "<hr class=\"my-4\">"+
+                            "<p>"+ load[i].text +"</p>"+
+                            "<p style=\"text-align: center;\" class=\"lead\">"+
+                            "<a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">REMOVE</a>"+
+                            "</p>"+
+                        "</div>"+
+                    "</div>"+
+                    "</div>";
+    }
+
 }

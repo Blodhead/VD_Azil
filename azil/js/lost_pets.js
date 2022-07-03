@@ -1,7 +1,6 @@
 
 var lost_animals;
 function initialize(){
-  
   if(localStorage.getItem("current_user") == null){
     document.getElementById("addnotice").style.display="none";
 }else{
@@ -27,7 +26,7 @@ function initialize(){
             number:"0646032298",
             picture:"../images/lost/Jura.jpg",
             comments: ["500g","dewdwfq",",[pp[,[pp"],
-            post_owner:"Slavisa"
+            post_owner:"Maja"
           },
           {
             post_name: "Nuli",
@@ -35,14 +34,14 @@ function initialize(){
             number:"0613978897",
             picture:"../images/lost/Koki.jpg",
             comments: ["500g","dewdwfq"],
-            post_owner:"Slavisa"
+            post_owner:"Milos"
           },          {
             post_name: "Julie",
             text: "If you find french buldog in Cerak. His name is Max. There is a reward!",
             number:"0613978897",
             picture:"../images/lost/Mica.PNG",
             comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
-            post_owner:"Slavisa"
+            post_owner:"Maja"
           },
           {
             post_name: "Buli",
@@ -50,7 +49,7 @@ function initialize(){
             number:"0646032298",
             picture:"../images/lost/Piksi.jpg",
             comments: ["500g","dewdwfq",",[pp[,[pp"],
-            post_owner:"Slavisa"
+            post_owner:"Milos"
           },
           
 
@@ -87,6 +86,7 @@ function initialize(){
     localStorage.setItem("lost",JSON.stringify(lost_animals));
 
     fill_html();
+
 
 }
 
@@ -179,6 +179,7 @@ function fill_html(){
         document.getElementById("flip-card-btn-turn-to-front"+i).onclick = function(i) {
             var curr_elem = ((i.currentTarget).id).slice(-1);
         document.getElementById("flip-card"+curr_elem).classList.toggle("do-flip");
+
         };
     }
 
