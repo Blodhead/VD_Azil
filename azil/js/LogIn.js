@@ -1,7 +1,7 @@
 var users;
 var load_lost;
 function initialize(){
-    //localStorage.clear("current_user");
+    //localStorage.removeItem("current_user");
 
     if(localStorage.getItem("current_user") == null){
         document.getElementById("addnotice").style.display="none";
@@ -62,6 +62,12 @@ function fill_page(){
   "<div class=\"container\">"+
 
     "<div class=\"row\">"+
+        "<div style=\"text-align:right; margin-top:10px\" class=\"col-12 posts\">"+
+        "<button type=\"button\" class=\"btn btn-link\" onclick=\"logout()\">Log out</button>"+
+        "</div>"+
+    "</div>"+
+
+    "<div class=\"row\">"+
 
 
         "<div class=\"col-6 posts\">"+
@@ -86,10 +92,9 @@ function fill_page(){
 
 
     "</div>";
-
+    document.getElementById("prostor").innerHTML+="<div class=\"row\"><div class=\"col-12\"><h1 style=\"text-align: center;\">MY POSTS</h1></div></div>";
     for(var i = 0; i < load.length; i++){
         if(load[i].post_owner == localStorage.getItem("current_user")){
-        if(i==0) document.getElementById("prostor").innerHTML+="<h1 style=\"text-align: center;\">MY POSTS</h1>";
     document.getElementById("prostor").innerHTML+=
         "<div class=\"row\" style=\"margin-top:20px\">"+
                     "<div class=\"col-12\">"+
@@ -107,5 +112,33 @@ function fill_page(){
     }
     }
 
-    
+
+    document.getElementById("komentari").innerHTML+="<div class=\"row\"><div class=\"col-12\"><h1 style=\"text-align: center;\">MY COMMENTS</h1></div></div>";
+    for(var i = 0; i < load.length; i++){
+        if(load[i].post_owner == localStorage.getItem("current_user")){
+    document.getElementById("komentari").innerHTML+=
+        "<div class=\"row\" style=\"margin-top:20px\">"+
+                    "<div class=\"col-12\">"+
+                        "<div id=\"shadow\" class=\"jumbotron oval\">"+
+                            "<h1 class=\"display-4\"><img style=\"width:435px\" src="+ load[i].picture +"></h1>"+
+                            "<p class=\"lead\">"+ load[i].post_name +"</p>"+
+                            "<hr class=\"my-4\">"+
+                            "<p>"+ load[i].text +"</p>"+
+                            "<p style=\"text-align: center;\" class=\"lead\">"+
+                            "<a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">REMOVE</a>"+
+                            "</p>"+
+                        "</div>"+
+                    "</div>"+
+                    "</div>";
+    }
+    }
+
+
+}
+
+function logout(){
+    localStorage.removeItem("current_user");
+    document.location.reload();
+
+
 }
