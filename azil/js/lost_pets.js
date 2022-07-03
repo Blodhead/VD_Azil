@@ -82,9 +82,22 @@ function initialize(){
       localStorage.removeItem("load_lost");
     } 
 
+    var del = JSON.parse(localStorage.getItem("comments_to_delete"));
+    if(del != null){
+      for(var j = 0; j < del.length; j++){
+        var com = del[j].charAt(del[j].length-1);
+        var post = del[j].charAt(del[j].length-2);
+        lost_animals[Number(post)].comments[Number(com)-1] = null;
+      }
+      for(var f = 0; f < lost_animals.length; f++)
+        for(var cnt = (lost_animals[f].comments.length-1); cnt >= 0; cnt-- ){
+          if(lost_animals[f].comments[cnt] == null) lost_animals[f].comments.splice(cnt,1);
+        }
+
+      localStorage.removeItem("comments_to_delete");
+    }
 
     localStorage.setItem("lost",JSON.stringify(lost_animals));
-
     fill_html();
 
 
@@ -197,9 +210,12 @@ document.getElementById("com"+i).innerHTML+=
    document.getElementById("textAreaExample"+i).value+
 "</div>";
 lost_animals[i].comments.push(document.getElementById("textAreaExample"+i).value);
+localStorage.setItem("lost",JSON.stringify(lost_animals));
+
 var kor = JSON.parse(localStorage.getItem("users"));
 var tren = localStorage.getItem("current_user");
 var l = 0;
+
 while(kor[l].username != tren){l++;};
 
 kor[l].comments.push(document.getElementById("textAreaExample"+i).value);
