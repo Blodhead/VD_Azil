@@ -16,7 +16,7 @@ function initialize(){
         {
             username: "Milos",
             password:"123456",
-            comments:[]
+            comments:[11,01]
         },
         {
             username: "Maja",
@@ -63,6 +63,7 @@ function fill_page(){
 
     "<div class=\"row\">"+
         "<div style=\"text-align:right; margin-top:10px\" class=\"col-12 posts\">"+
+        "<p style=\"display:inline\">Hi "+localStorage.getItem("current_user")+"!</p>"+
         "<button type=\"button\" class=\"btn btn-link\" onclick=\"logout()\">Log out</button>"+
         "</div>"+
     "</div>"+
