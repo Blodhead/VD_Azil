@@ -2,7 +2,7 @@
 var dogs_array;
 
 function initialize(){
-
+  localStorage.removeItem("birds");
   if(localStorage.getItem("current_user") == null){
     document.getElementById("addnotice").style.display="none";
 }else{
@@ -17,73 +17,73 @@ function initialize(){
       /* Ovde dodavati podatke */
         dogs_array = [
           {
-            name: "Julie",
+            name: "Џули",
             age: "4",
             weight: "500g",
             breed: "Parakeet",
             images:["../images/birds/Julie1.PNG", "../images/birds/Julie2.PNG"],
             videos:[],
-            description: "Julie is a budgie, or budgerigar, who is looking for her new forever home. She prefers the company of other birds, so she would do best in an aviary situation or in a patient home that is willing to work her and a buddy.",
+            description: "Џули је папагај, или папагај папагаја, који тражи свој нови заувек дом. Више воли друштво других птица, тако да би се најбоље снашла у ситуацији са волијером или у дому за пацијенте који је спреман да ради њу и друга.",
             displayed:true  
           },
           {
-            name: "Rori",
+            name: "Рори",
             age: "5",
             weight: "300g",
             breed: "Parakeet",
             images:["../images/birds/Rori1.JPG","../images/birds/Rori2.JPG","../images/birds/Rori3.JPG"],
             videos:[],
-            description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. ",
+            description: "Још увек упознајемо Рорија и чекамо да се скраси и покаже своју личност. Он је стидљив момак, који воли свој лични простор и треба му мирно, тихо окружење да би се осећао опуштено. ",
             displayed:true
           },
           {
-            name: "Poli",
+            name: "Поли",
             age: "4",
             weight: "1kg",
             breed: "Macaw",
             images:["../images/birds/Poli1.PNG","../images/birds/Poli2.PNG","../images/birds/Poli3.PNG","../images/birds/Poli4.PNG"],
             videos:[],
-            description: "Poli is friendly, chatty, and social. She is shy meeting new people but once she considers you a friend, Poli wants to be the center of attention. Poli would do best in a home who wants a buddy to do everything with.",
+            description: "Поли је дружељубива, причљива и друштвена. Она је стидљива да упозна нове људе, али једном када те сматра пријатељем, Поли жели да буде у центру пажње. Поли би се најбоље снашла у кући која жели другара са којим ће све радити.",
             displayed:true
           },
           {
-            name: "Set",
+            name: "Сет",
             age: "1",
             weight: "300g",
             breed: "Parakeet",
             images:["../images/birds/Set1.PNG","../images/birds/Set2.PNG"],
             videos:["../images/dogs/boni.mp4"],
-            description: "Neptune is a little shy around people, and more interested in interacting with her mate, Saturn. The pair would likely do best in an aviary setting with lots of space, and could potentially do well with other birds. ",
+            description: "Сет је мало стидљив са људима и више је заинтересован за интеракцију са својим партнером, Сатурном. Пар би се вероватно најбоље снашао у амбијенту волијере са пуно простора и потенцијално би могао добро да се носи са другим птицама.",
 
           },
           {
-            name: "Loli",
+            name: "Лоли",
             age: "3",
             weight: "200g",
             breed: "Parakeet",
             images:["../images/birds/Loli1.PNG"],
             videos:[],
-            description: "Loli is still getting comfortable around people, and definitely has a curious side. He is used to living with other birds, but can be a little more timid.",
+            description: "Лоли се и даље осећа удобно са људима и дефинитивно има радозналу страну. Навикао је да живи са другим птицама, али може бити мало плашљивији.",
             displayed:true
           },
           {
-            name: "Voki",
+            name: "Воли",
             age: "12",
             weight: "1kg",
             breed: "Macaw",
             images:["../images/birds/Voki1.PNG","../images/birds/Voki2.PNG"],
             videos:[],
-            description: "Voki is beautiful hybrid Macaw who we are still getting to know. She is very curious and eager to interact with us but is still building her confidence. Lola would do best in a home willing to go at her pace.",
+            description: "Воки је прелепа хибридна ара коју тек упознајемо. Веома је радознала и жељна интеракције са нама, али још увек гради своје самопоуздање. Лола би се најбоље снашла у кући која је спремна да иде њеним темпом.",
             displayed:true
           },
           {
-            name: "Rozi",
+            name: "Рози",
             age: "7",
             weight: "300g",
             breed: "Parakeet",
             images:["../images/birds/Rori1.JPG","../images/birds/Rori2.JPG","../images/birds/Rori3.JPG"],
             videos:[],
-            description: "We are still getting to know Rori, and waiting for him to settle in and let his personality show. He is shy guy, who likes his personal space and needs a calm, quiet environment to feel at ease. ",
+            description: "Још увек упознајемо Рорија и чекамо да се скраси и покаже своју личност. Он је стидљив момак, који воли свој лични простор и треба му мирно, тихо окружење да би се осећао опуштено.",
             displayed:true
           },
 
@@ -124,15 +124,15 @@ function fill_html(){
                             "<table>"+
 
                               "<tr>"+
-                                "<td><h6>Age: </h6></td>"+
+                                "<td><h6>Године: </h6></td>"+
                                 "<td>"+ dogs_array[i].age +"</td>"+
                               "</tr>"+
                               "<tr>"+
-                                "<td><h6>Weigth: </h6></td>"+
+                                "<td><h6>Тежина: </h6></td>"+
                                 "<td>"+dogs_array[i].weight+"</td>"+
                               "</tr>"+
                               "<tr>"+
-                                "<td><h6>Breed: </h6></td>"+
+                                "<td><h6>Раса: </h6></td>"+
                                 "<td>"+dogs_array[i].breed+"</td>"+
 
                               "</tr>"+
@@ -153,7 +153,7 @@ function fill_html(){
                       "<div class=\"u-layout-col\">"+
                         "<div class=\"u-align-left u-container-style u-layout-cell u-size-60 u-layout-cell-2\">"+
                           "<div class=\"u-container-layout u-valign-top u-container-layout-2\">"+
-                            "<h6 class=\"u-text u-text-default u-text-3\">Description</h6>"+
+                            "<h6 class=\"u-text u-text-default u-text-3\">Опис</h6>"+
                             "<p class=\"u-text u-text-grey-40 u-text-4\">"+ dogs_array[i].description +"</p>"+
                           "</div>"+
                         "</div>"+
