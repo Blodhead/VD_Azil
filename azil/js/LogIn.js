@@ -179,9 +179,24 @@ if(del == null){
     del_Arr.push(users[l].comid[temp]);
     localStorage.setItem("comments_to_delete",JSON.stringify(del_Arr));
 }
-users[l].comments.splice(temp,1);
+
 users[l].comid.splice(temp,1);
 
+var del_comment = JSON.parse(localStorage.getItem("lost"));
+for(var i = 0; i < del_comment.length; i++)
+for(var x = (del_comment[i].comments.length-1); x >= 0; x--){
+
+    if(users[l].comments != null)
+        
+        if(del_comment[i].comments[x] == users[l].comments[temp]) {
+            del_comment[i].comments.splice(x, 1);
+            break;
+        }
+        
+
+}
+users[l].comments.splice(temp, 1);
+localStorage.setItem("lost",JSON.stringify(del_comment));
 localStorage.setItem("users",JSON.stringify(users));
 
     document.location.reload();
@@ -206,9 +221,10 @@ while(kor[l].username != tren){l++;};
                 if(lost[i].comments[x] == del[y]) del.splice(y,1);
 
             }
-        if(users[l].comments != null)
-            for(var y = users[l].comments.length-1; y >= 0; y--){
-                if(lost[i].comments[x] == users[l].comments[y]) users[l].comments.splice(y,1);
+            for(var u = 0; u < users.length;u++)
+        if(users[u].comments != null)
+            for(var y = users[u].comments.length-1; y >= 0; y--){
+                if(lost[i].comments[x] == users[u].comments[y]) users[u].comments.splice(y,1);
             }
 
     }
