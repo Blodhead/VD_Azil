@@ -14609,7 +14609,7 @@ div.u-video,
   margin: 31px 0 0 0 !important;
 }
 .u-spacing-30:not(.u-text) > li:not(:last-child) {
-  margin-right: 30px;
+
 }
 .u-spacing-30 > .u-accordion-item + .u-accordion-item {
   margin-top: 30px;
@@ -15230,7 +15230,6 @@ div.u-video,
 .u-enable-responsive .u-sidenav .u-nav-item {
   display: block;
   height: auto;
-  margin-left: 0;
   /* override horizontal spacing */
 }
 .u-enable-responsive .u-sidenav .u-nav-link {
