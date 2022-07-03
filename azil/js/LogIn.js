@@ -187,4 +187,12 @@ localStorage.setItem("users",JSON.stringify(users));
     document.location.reload();
 }
 
-function removePost(i){}
+
+function removePost(i){
+
+    var lost = JSON.parse(localStorage.getItem("lost"));
+
+    lost.splice(i,1);
+    localStorage.setItem("lost",JSON.stringify(lost));
+    document.location.reload();
+}
