@@ -58,12 +58,14 @@ function fill_page(){
   var load = JSON.parse(load_lost);
 
   document.getElementById("contis").innerHTML+=
+  
   "<div class=\"container\">"+
 
     "<div class=\"row\">"+
 
 
         "<div class=\"col-6 posts\">"+
+        
             "<div id=\"prostor\" class=\"container\">"+
 
             "</div>"+
@@ -76,10 +78,7 @@ function fill_page(){
 
 
         "<div class=\"col-6 comments\">"+
-            "<div class=\"container\">"+
-
-                "<div class=\"row\">"+
-                "</div>"+
+            "<div id=\"komentari\" class=\"container\">"+
             
             "</div>"+
         "</div>"+
@@ -89,12 +88,13 @@ function fill_page(){
     "</div>";
 
     for(var i = 0; i < load.length; i++){
-        if(load[i].post_owner == localStorage.getItem("current_user"))
+        if(load[i].post_owner == localStorage.getItem("current_user")){
+        if(i==0) document.getElementById("prostor").innerHTML+="<h1 style=\"text-align: center;\">MY POSTS</h1>";
     document.getElementById("prostor").innerHTML+=
         "<div class=\"row\" style=\"margin-top:20px\">"+
                     "<div class=\"col-12\">"+
-                        "<div class=\"jumbotron\">"+
-                            "<h1 class=\"display-4\"><img style=\"max-width:100%\" src="+ load[i].picture +"></h1>"+
+                        "<div id=\"shadow\" class=\"jumbotron oval\">"+
+                            "<h1 class=\"display-4\"><img style=\"width:435px\" src="+ load[i].picture +"></h1>"+
                             "<p class=\"lead\">"+ load[i].post_name +"</p>"+
                             "<hr class=\"my-4\">"+
                             "<p>"+ load[i].text +"</p>"+
@@ -105,5 +105,7 @@ function fill_page(){
                     "</div>"+
                     "</div>";
     }
+    }
 
+    
 }
