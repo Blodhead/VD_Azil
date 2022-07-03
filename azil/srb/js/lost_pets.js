@@ -1,6 +1,7 @@
 
 var lost_animals;
 function initialize(){
+
   if(localStorage.getItem("current_user") == null){
     document.getElementById("addnotice").style.display="none";
 }else{
@@ -13,42 +14,42 @@ function initialize(){
       /* Ovde dodavati podatke */
         lost_animals = [
           {
-            post_name: "Dzaja",
-            text: "If you find a domestic cat in New Belgrade. He responds to name Dzaja. There is a reward!",
+            post_name: "Џаја",
+            text: "Ако нађете домаћу мачку на Новом Београду. Одазива се на име Џаја. Постоји награда!",
             number:"0613978897",
             picture:"../images/lost/Dzaja.jpg",
-            comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
+            comments: ["Мислим да сам га видео на мостићу код Арене!","Тешко да ћеш га наћи, сви су исти...","Срећно са потрагонм","Јој како слатка мачка, надам се да ћете је наћи!"],
             post_owner:"Milos"
           },
           {
-            post_name: "Jura",
-            text: "A bichon Jura, she has 7 months, last seen at Palilula. Please call if you have any info.",
+            post_name: "Јура",
+            text: "Бишон Јура, има 7 месеци, последњи пут виђена на Палилули.",
             number:"0646032298",
             picture:"../images/lost/Jura.jpg",
-            comments: ["500g","dewdwfq",",[pp[,[pp"],
+            comments: ["Ако будем у околини бацићу поглед!","7 месеци, па то још беба, мора да је уплашен","Надам се да ћете га брзо наћи!"],
             post_owner:"Maja"
           },
           {
-            post_name: "Nuli",
-            text: "Please call on 0613978897 if you find french buldog in Cerak. His name is Max. Reward!",
+            post_name: "Макс",
+            text: "Папагај макс се уплашио од комшиске маче и одлетео, Врачар.",
             number:"0613978897",
             picture:"../images/lost/Koki.jpg",
-            comments: ["500g","dewdwfq"],
+            comments: ["Знам да црвкућем па ћу пробати да га дозовем","Прелепе боје, срећно са потрагом!"],
             post_owner:"Milos"
           },          {
-            post_name: "Julie",
-            text: "If you find french buldog in Cerak. His name is Max. There is a reward!",
+            post_name: "Јули",
+            text: "Канаринац нестао са терасе у Сурчину! Одазива се на Јули",
             number:"0613978897",
             picture:"../images/lost/Mica.PNG",
-            comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
+            comments: ["Јој сто је мали, надам се да ћете га брзо наћи","Мислио сам да сам га видео са врапцима у парку како једе испред црве, на центру"],
             post_owner:"Maja"
           },
           {
-            post_name: "Buli",
-            text: "A bichon Lora, she has 7 months, last seen at Palilula. Please call if you have any info.",
+            post_name: "Лора",
+            text: "Теријер Лора нестала, уплашила се великог пса и побегла на Земунском кеју.",
             number:"0646032298",
             picture:"../images/lost/Piksi.jpg",
-            comments: ["500g","dewdwfq",",[pp[,[pp"],
+            comments: ["Ја пролазим данас туда, јављам ако ишта сазнам!","Само да не скочи у воду","Можда позвати ватрогасце или рониоце"],
             post_owner:"Milos"
           },
           
@@ -126,7 +127,7 @@ function fill_html(){
                "</h4>"+
                "<div class=\"u-blog-control u-metadata u-text-grey-40 u-metadata-3\">"+
                  "<span class=\"u-meta-date u-meta-icon\">Thu Jun 23 2022</span>"+
-                 "<span class=\"u-meta-comments u-meta-icon\">Call: "+lost_animals[i].number+"</span>"+
+                 "<span class=\"u-meta-comments u-meta-icon\">Позив на: "+lost_animals[i].number+"</span>"+
                "</div>"+
                "<div class=\"u-align-left-lg u-align-left-md u-align-left-sm u-blog-control u-post-content u-text u-text-6\">"+ lost_animals[i].text +"</div>"+
                "<table id=\"table\"> <tr><td>"+
