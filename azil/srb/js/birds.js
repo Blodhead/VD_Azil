@@ -2,7 +2,7 @@
 var dogs_array;
 
 function initialize(){
-  localStorage.removeItem("birds");
+
   if(localStorage.getItem("current_user") == null){
     document.getElementById("addnotice").style.display="none";
 }else{

@@ -17,63 +17,63 @@ function initialize(){
     }else{
         dogs_array = [
             {
-                name: "Neo",
+                name: "Нео",
                 age: "3",
                 weight: "1kg",
                 breed: "Domestic Short Hair",
                 images:["../images/cats/Neo1.jpg","../images/cats/Neo2.jpg","../images/cats/Neo3.jpg"],
                 videos:[],
-                description: " Neo is an eccentric young cat! He loves company & happily chirps when you enter the room. You can start his purring machine by scratching him under the chin."
+                description: "Нео је ексцентрична млада мачка! Он воли друштво и радо цвркуће када уђете у собу. Можете покренути његову машину за предење тако што ћете га почешати испод браде."
                 ,displayed:true 
               },
             {
-                name: "Lexi",
+                name: "Лекси",
                 age: "2",
                 weight: "2kg",
                 images:["../images/cats/Leksi2.jpg","../images/cats/Leksi1.jpg","../images/cats/Leksi3.jpg"],
                 videos:[],
                 breed: "Domestic Short Hair",
-                description: "Lexi is a lovely, sweet lady. She gives respect and expects it in return. She chirps and greets with a gentle and friendly demeanor. She is petite and and needs tempting for new foods. She will be a loving family member and is ready for her new home!"
+                description: "Лекси је љупка, слатка дама. Она даје поштовање и очекује то заузврат. Она цвркуће и поздравља благим и пријатељским држањем. Она је ситна и треба јој примамљива за нову храну. Она ће бити члан породице пун љубави и спремна је за свој нови дом!"
                 ,displayed:true 
               },
             {
-                name: "Nanny",
+                name: "Нени",
                 age: "1",
                 weight: "1kg",
                 images:["../images/cats/Nanny1.PNG","../images/cats/Nanny2.PNG","../images/cats/Nanny3.PNG"],
                 videos:["../images/dogs/boni.mp4"],
                 breed: "Domestic Short Hair",
-                description: "Nanny is a very loving kitty. She likes people's attention and if you give her pets and hugs then she will purr away for you. She is a young cat that still has kitten energy and will bat around toys, chase laser pointers and wands. Don't be surprised if she follows you around the house to see what you are up to."
+                description: "Нени је веома љубазна маца. Она воли пажњу људи и ако јој поклоните љубимце и загрлите, она ће предети за вас. Она је млада мачка која још увек има енергију мачића и лупаће око играчака, јурити ласерске показиваче и штапиће. Немојте се изненадити ако вас прати по кући да види шта намеравате."
                 ,displayed:true 
               },
             {
-              name: "Zoi",
+              name: "Зои",
               age: "1",
               weight: "1kg",
               images:["../images/cats/Zoi1.PNG","../images/cats/Zoi2.PNG"],
               videos:[],
               breed: "Domestic Short Hair",
-              description: "Zoi is playful and has the right amount of independence and snuggliness! He is happy to find his own things to play with but will gladly play with you too! He does well with children, other cats, and dogs."
+              description: "Зои је разигран и има праву дозу независности и пригушености! Радо ће пронаћи своје ствари са којима ће се играти, али ће се радо играти и са вама! Добро се слаже са децом, другим мачкама и псима."
               ,displayed:true 
             },
           {
-              name: "Neli",
+              name: "Нели",
               age: "2",
               weight: "2kg",
               images:["../images/cats/Neli1.PNG","../images/cats/Neli2.PNG"],
               videos:[],
               breed: "Domestic Short Haired",
-              description: "Neli loves to play! She is fun to play with and to watch. Neli will appreciate having another friendly feline to hangout with. Some of her favorite toys are sparkle balls, wand toys and the occasional ball ring. "
+              description: "Neli loves to play! She iНели воли да се игра! Забавна је за играње и гледање. Нели ће ценити да има још једну пријатељску мачку за дружење. Неке од њених омиљених играчака су светлуцаве лоптице, играчке са штапићима и повремени прстен са лоптом.s fun to play with and to watch. Neli will appreciate having another friendly feline to hangout with. Some of her favorite toys are sparkle balls, wand toys and the occasional ball ring. "
               ,displayed:true 
             },
           {
-              name: "Max",
+              name: "Макс",
               age: "3",
               weight: "2kg",
               images:["../images/cats/Max1.PNG","../images/cats/Max2.PNG","../images/cats/Max3.PNG"],
               videos:[],
               breed: "Domestic Short Hair",
-              description: "Though he likes being petted and brushed, Max is not a fan of being picked up. He loves his floor toys and is getting used to wand play, and a room with a view would be much appreciated so he can chatter at birds and squirrels. "
+              description: "Иако воли да га мазе и чешљају, Макс не воли да га покупе. Обожава своје играчке на поду и навикава се на игру штапића, а соба са погледом би била веома цењена како би могао да брбља о птицама и веверицама. "
               ,displayed:true 
             }
         
@@ -115,15 +115,15 @@ function fill_html(){
                           "<table>"+
 
                             "<tr>"+
-                              "<td><h6>Age: </h6></td>"+
+                              "<td><h6>Године: </h6></td>"+
                               "<td>"+ dogs_array[i].age +"</td>"+
                             "</tr>"+
                             "<tr>"+
-                              "<td><h6>Weigth: </h6></td>"+
+                              "<td><h6>Тежина: </h6></td>"+
                               "<td>"+dogs_array[i].weight+"</td>"+
                             "</tr>"+
                             "<tr>"+
-                              "<td><h6>Breed: </h6></td>"+
+                              "<td><h6>Раса: </h6></td>"+
                               "<td>"+dogs_array[i].breed+"</td>"+
 
                             "</tr>"+
@@ -144,7 +144,7 @@ function fill_html(){
                     "<div class=\"u-layout-col\">"+
                       "<div class=\"u-align-left u-container-style u-layout-cell u-size-60 u-layout-cell-2\">"+
                         "<div class=\"u-container-layout u-valign-top u-container-layout-2\">"+
-                          "<h6 class=\"u-text u-text-default u-text-3\">Description</h6>"+
+                          "<h6 class=\"u-text u-text-default u-text-3\">Опис</h6>"+
                           "<p class=\"u-text u-text-grey-40 u-text-4\">"+ dogs_array[i].description +"</p>"+
                         "</div>"+
                       "</div>"+
