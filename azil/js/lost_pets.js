@@ -197,6 +197,14 @@ document.getElementById("com"+i).innerHTML+=
    document.getElementById("textAreaExample"+i).value+
 "</div>";
 lost_animals[i].comments.push(document.getElementById("textAreaExample"+i).value);
+var kor = JSON.parse(localStorage.getItem("users"));
+var tren = localStorage.getItem("current_user");
+var l = 0;
+while(kor[l].username != tren){l++;};
+
+kor[l].comments.push(document.getElementById("textAreaExample"+i).value);
+kor[l].comid.push(i+""+lost_animals[i].comments.length);
+localStorage.setItem("users",JSON.stringify(kor));
 }
 
 

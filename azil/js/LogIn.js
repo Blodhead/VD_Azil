@@ -2,11 +2,12 @@ var users;
 var load_lost;
 function initialize(){
     //localStorage.removeItem("current_user");
-
+    //localStorage.removeItem("users");
     if(localStorage.getItem("current_user") == null){
         document.getElementById("addnotice").style.display="none";
     }else{
         document.getElementById("addnotice").style.display="inline-block";
+        users = JSON.parse(localStorage.getItem("users"));
         fill_page();
     }
 
@@ -16,12 +17,14 @@ function initialize(){
         {
             username: "Milos",
             password:"123456",
-            comments:[11,01]
+            comments:[],
+            comid:[]
         },
         {
             username: "Maja",
             password:"123456",
-            comments:[]
+            comments:["irefko","iudohfgopwehifgs"],
+            comid:[]
         }
     ];
     localStorage.setItem("users",JSON.stringify(users));
@@ -85,8 +88,11 @@ function fill_page(){
 
 
         "<div class=\"col-6 comments\">"+
-            "<div id=\"komentari\" class=\"container\">"+
-            
+            "<div id=\"komentari\" class=\"container com\">"+
+
+                "<div id=\"com"+"\"class=\"comment-section\">"+
+                "</div>"+
+
             "</div>"+
         "</div>"+
     "</div>"+
@@ -113,26 +119,21 @@ function fill_page(){
     }
     }
 
+    var temp = document.getElementById("komentari").innerHTML;
+    document.getElementById("komentari").innerHTML="<div class=\"row\"><div class=\"col-12\"><h1 style=\"text-align: center;\">MY COMMENTS</h1></div></div>";
+    document.getElementById("komentari").innerHTML+=temp;
 
-    document.getElementById("komentari").innerHTML+="<div class=\"row\"><div class=\"col-12\"><h1 style=\"text-align: center;\">MY COMMENTS</h1></div></div>";
-    for(var i = 0; i < load.length; i++){
-        if(load[i].post_owner == localStorage.getItem("current_user")){
-    document.getElementById("komentari").innerHTML+=
-        "<div class=\"row\" style=\"margin-top:20px\">"+
-                    "<div class=\"col-12\">"+
-                        "<div id=\"shadow\" class=\"jumbotron oval\">"+
-                            "<h1 class=\"display-4\"><img style=\"width:435px\" src="+ load[i].picture +"></h1>"+
-                            "<p class=\"lead\">"+ load[i].post_name +"</p>"+
-                            "<hr class=\"my-4\">"+
-                            "<p>"+ load[i].text +"</p>"+
-                            "<p style=\"text-align: center;\" class=\"lead\">"+
-                            "<a class=\"btn btn-primary btn-lg\" href=\"#\" role=\"button\">REMOVE</a>"+
-                            "</p>"+
-                        "</div>"+
-                    "</div>"+
-                    "</div>";
-    }
-    }
+    var tren = localStorage.getItem("current_user");
+
+    var l = 0;
+    while(users[l].username != tren){l++;};
+
+    for(var j = 0; j < users[l].comments.length; j++){
+        document.getElementById("com").innerHTML+=
+        "<div id=\"com_id"+i+""+j+ "\" class=\"comment\">"+
+        users[l].comments[j]+
+        "</div>";
+        } 
 
 
 }
