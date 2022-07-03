@@ -2,6 +2,7 @@
 var dogs_array;
 
 function initialize(){
+  localStorage.removeItem("dogs");
   if(localStorage.getItem("current_user") == null){
     document.getElementById("addnotice").style.display="none";
 }else{
@@ -14,63 +15,63 @@ function initialize(){
     }else{
         dogs_array = [
             {
-                name: "Rea",
+                name: "Реа",
                 age: "3",
                 weight: "2kg",
                 breed: " Staffordshire Bull Terrier",
                 images:["../images/dogs/Rea1.jpg","../images/dogs/Rea2.jpg","../images/dogs/Rea3.jpg","../images/dogs/Rea4.jpg","../images/dogs/Rea6.jpg"],
                 videos:[],
-                description: "Rea is a lovely girl, she is sweet and affectionate with those she knows and will quickly become a cuddly companion in her new home. She will need someone around for most of the day whilst she settles in. She enjoys playtimes with a tennis ball, and is very sweet taking her soft toys to her bed."
+                description: "Реа је љупка девојка, слатка је и љубазна са онима које познаје и брзо ће постати умиљата другарица у свом новом дому. Биће јој потребан неко у близини већи део дана док се смести. Она ужива у играма са тениском лоптицом и веома је слатка да носи своје мекане играчке у кревет."
                 ,displayed:true  
               },
             {
-                name: "Bonnie",
+                name: "Бони",
                 age: "14",
                 weight: "19kg",
                 breed: "Samoyed",
                 images:["../images/dogs/Bonnie1.jpg","../images/dogs/Bonnie2.jpg","../images/dogs/Bonnie3.jpg","../images/dogs/Bonnie4.jpg"],
                 videos:["../images/dogs/boni.mp4"],
-                description: "Bonnie is a sweet and playful grandma, so will need a calm home with owners that are experienced with her breed. Whoever takes on Bonnie must be willing to continue her enjoyment in life. She is highly intelligent, loves to learn new tricks and LOVES to cuddle!"
+                description: "Бони је слатка и разиграна бака, па ће јој требати миран дом са власницима који имају искуство са њеном расом. Ко год да преузме Бони мора бити спреман да настави да ужива у животу. Веома је интелигентна, воли да учи нове трикове и ВОЛИ да се мази!"
                 ,displayed:true  
               },
             {
-                name: "Ari",
+                name: "Ари",
                 age: "1",
                 weight: "2kg",
                 breed: "French Buldog",
                 images:["../images/dogs/Ari2.jpg","../images/dogs/Ari1.jpg","../images/dogs/Ari3.jpg"],
                 videos:[],
-                description: "Ari is very friendly and affectionate. He loves cuddles and tummy rubs and has the cutest snore! He enjoys going out for walks and he is very good in the house. His only weakness is  that he doesn't like other dogs. This is easily managed when approached properly. "
+                description: "Ари је веома љубазан и привржен. Он воли мажење и трљање стомака и најслађе хрче! Ужива у шетњама и веома је добар у кући. Његова једина слабост је што не воли друге псе. Овим се лако управља када се правилно приступи. "
               , displayed:true  
               },
             {
-              name: "Ben",
+              name: "Бен",
               age: "1",
               weight: "2kg",
               breed: "Beagle",
               images:["../images/dogs/Ben1.jpg","../images/dogs/Ben2.jpg","../images/dogs/Ben3.jpg","../images/dogs/Ben4.jpg","../images/dogs/Ben5.jpg"],
               videos:[],
-              description: "Ben is a Beagle puppy about 1 year old. He is very sweet and friendly. You will need to have your own large fully enclosed garden so he can have a quick run around. Ben is special because he is such a friendly boy who loves attention and can't wait to go to his new loving forever home."
+              description: "Бен је штене Бигл стар око годину дана. Веома је сладак и дружељубив. Мораћете да имате своју велику, потпуно затворену башту како би он могао брзо да трчкара. Бен је посебан јер је тако дружељубив дечак који воли пажњу и једва чека да оде у свој нови дом заувек."
               ,displayed:true  
             },
           {
-              name: "Danny",
+              name: "Дени",
               age: "3",
               weight: "5kg",
               breed: "Chau Chau",
               images:["../images/dogs/Ajaks1.jpg","../images/dogs/Ajaks3.jpg","../images/dogs/Ajaks4.jpg","../images/dogs/Ajaks2.jpg"],
               videos:[],
-              description: "Danny is a sweet boy who is 3 year old. He is a dog who has a happy personality and loves exploring. He knows a few commands, and can be left for a little while. He is very friendly with people and gets on ok with other dogs."
+              description: "Дени је сладак дечак који има 3 године. Он је пас који има срећну личност и воли истраживање. Он зна неколико команди и може се оставити на неко време. Веома је дружељубив са људима и добро се слаже са другим псима."
               ,displayed:true  
             },
           {
-              name: "Lina",
+              name: "Лина",
               age: "2",
               weight: "1kg",
               breed: "Bichon",
               images:["../images/dogs/Lora3.jpg","../images/dogs/Lora1.jpg","../images/dogs/Lora2.jpg","../images/dogs/Lora5.jpg","../images/dogs/Lora4.jpg"],
               videos:[],
-              description: "Lina is a cute 1 year old Bichon who is looking for a new home. She's sweet dog who can be wary of new people but come round quite quickly, especially if there are a few treats coming her way. She is playful and love her toys. She travels fine in a car and will enjoy joining her new family on fun days out. "
+              description: "Лина је слатка једногодишња Бишон која тражи нови дом. Она је сладак пас који уме да буде опрезан према новим људима, али се брзо сврати, посебно ако јој се спрема неколико посластица. Она је разиграна и воли своје играчке. Она добро путује аутомобилом и уживаће да се придружи својој новој породици у забавним данима. "
               ,displayed:true  
             }
         
@@ -111,15 +112,15 @@ function fill_html(){
                           "<table>"+
 
                             "<tr>"+
-                              "<td><h6>Age: </h6></td>"+
+                              "<td><h6>Године: </h6></td>"+
                               "<td>"+ dogs_array[i].age +"</td>"+
                             "</tr>"+
                             "<tr>"+
-                              "<td><h6>Weigth: </h6></td>"+
+                              "<td><h6>Тежина: </h6></td>"+
                               "<td>"+dogs_array[i].weight+"</td>"+
                             "</tr>"+
                             "<tr>"+
-                              "<td><h6>Breed: </h6></td>"+
+                              "<td><h6>Раса: </h6></td>"+
                               "<td>"+dogs_array[i].breed+"</td>"+
 
                             "</tr>"+
@@ -140,7 +141,7 @@ function fill_html(){
                     "<div class=\"u-layout-col\">"+
                       "<div class=\"u-align-left u-container-style u-layout-cell u-size-60 u-layout-cell-2\">"+
                         "<div class=\"u-container-layout u-valign-top u-container-layout-2\">"+
-                          "<h6 class=\"u-text u-text-default u-text-3\">Description</h6>"+
+                          "<h6 class=\"u-text u-text-default u-text-3\">Опис</h6>"+
                           "<p class=\"u-text u-text-grey-40 u-text-4\">"+ dogs_array[i].description +"</p>"+
                         "</div>"+
                       "</div>"+
