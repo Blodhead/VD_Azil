@@ -1,0 +1,178 @@
+
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:300,600');
+  html * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  *, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+  .shadow-1{
+    box-shadow: 5px 5px 5px black !important;
+  }
+  
+  
+  .com{
+    padding: 0%;
+    margin-bottom: 132px;
+    display: block;
+    height: 50px;
+    width: 500px;
+  }
+  
+  .comment-section{
+    border-style: dotted;
+    max-height: 172px;
+    max-width: 100%;
+    margin-bottom: 20px;
+    background-color: #3f3f3f;
+    overflow-y: scroll;
+  }
+  
+  #table{
+    width: 50%;
+    /* align-content: end; */
+    margin-left: 45%;
+  }
+  
+  .comment{
+    text-align: left;
+    height: 10%;
+    padding: 2%;
+    margin: 2px;
+    background-color: #ffff;
+    color: black;
+  }
+  
+  .enlarge:hover {
+    transform: scale(1.10);
+  }
+  .oval{
+        border-radius: 50px;
+    }
+  
+  .flip-card-3D-wrapper {
+    width: 100%;
+    height: 100%;
+  
+    position: relative;
+    -o-perspective: 900px;
+    -webkit-perspective: 900px;
+    -ms-perspective: 900px;
+    perspective: 900px;
+    margin: 0 auto;
+  }
+  .flip-card {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: absolute;
+    -o-transition: all 1s ease-in-out;
+    -webkit-transition: all 1s ease-in-out;
+    -ms-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+    -o-transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+  }
+  .do-flip {
+    -o-transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    transform: rotateY(-180deg);
+  }
+  .flip-card-btn-turn-to-back, .flip-card-btn-turn-to-front {
+  
+    background-color: #478ac9;
+    color: #ffffff;
+    cursor: pointer;
+  
+  }
+  .flip-card .flip-card-back{
+    max-width: 100%;
+    position: absolute;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 2;
+
+  }
+  
+  .flip-card .flip-card-front{
+  
+    position: absolute;
+    -o-backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    backface-visibility: hidden;
+    z-index: 2;
+
+  }
+  .flip-card .flip-card-front {
+  
+      border:1px solid grey;
+  }
+  .flip-card .flip-card-back {
+  
+      border: 1px solid grey;
+      -o-transform: rotateY(180deg);
+      -webkit-transform: rotateY(180deg);
+      -ms-transform: rotateY(180deg);
+      transform: rotateY(180deg);
+  }
+  .flip-card .flip-card-front p, .flip-card .flip-card-back p {
+    color: grey;
+    display: block;
+    position: absolute;
+    top: 40%;
+    width: 100%;
+  }
+
+.u-image-3 {
+  height: 232px;
+  width: 191px;
+  margin: 0 auto 0 -1px;
+}
+
+.shadow{
+box-shadow: 5px 5px 5px black !important;
+}
+
+
+.oval{
+  -moz-border-radius: 50px;
+  -webkit-border-radius: 50px;
+  border-radius: 50px !important;
+}
+.card-img-left {
+  width: 45%;
+  /* Link to your background image using in the property below! */
+  background: scroll center url('../images/logo-doggo.jpg');
+  background-size: cover;
+}
+
+.btn-login {
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 0.75rem 1rem;
+}
+
+#shadow{
+  box-shadow: 5px 5px 5px black !important;
+  }
+
+.card-body{
+  text-align: center;
+}
+
+.u-body{
+  background: url("../images/poz4.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+  
