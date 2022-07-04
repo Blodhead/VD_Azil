@@ -10,7 +10,7 @@ function initialize(){
 }
 
 
-  //localStorage.removeItem("cats"); //delete before presentation
+    localStorage.removeItem("cats");
     let dogs = localStorage.getItem("cats");
     if(dogs != null){
         dogs_array = JSON.parse(dogs);

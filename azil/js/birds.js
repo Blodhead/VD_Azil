@@ -9,7 +9,7 @@ function initialize(){
     document.getElementById("addnotice").style.display="inline-block";
 }
 
-    //localStorage.removeItem("birds"); //delete before presentation
+    localStorage.removeItem("birds"); //delete before presentation
     let dogs = localStorage.getItem("birds");
     if(dogs != null){
         dogs_array = JSON.parse(dogs);
