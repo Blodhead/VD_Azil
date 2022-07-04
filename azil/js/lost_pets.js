@@ -1,6 +1,7 @@
 
 var lost_animals;
 function initialize(){
+
   if(localStorage.getItem("current_user") == null){
     document.getElementById("addnotice").style.display="none";
 }else{
@@ -11,46 +12,46 @@ function initialize(){
         lost_animals = JSON.parse(animal);
     }else{
       /* Ovde dodavati podatke */
-        lost_animals = [
-          {
-            post_name: "Dzaja",
-            text: "If you find a domestic cat in New Belgrade. He responds to name Dzaja. There is a reward!",
-            number:"0613978897",
-            picture:"../images/lost/Dzaja.jpg",
-            comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
-            post_owner:"Milos"
-          },
-          {
-            post_name: "Jura",
-            text: "A bichon Jura, she has 7 months, last seen at Palilula. Please call if you have any info.",
-            number:"0646032298",
-            picture:"../images/lost/Jura.jpg",
-            comments: ["500g","dewdwfq",",[pp[,[pp"],
-            post_owner:"Maja"
-          },
-          {
-            post_name: "Nuli",
-            text: "Please call on 0613978897 if you find french buldog in Cerak. His name is Max. Reward!",
-            number:"0613978897",
-            picture:"../images/lost/Koki.jpg",
-            comments: ["500g","dewdwfq"],
-            post_owner:"Milos"
-          },          {
-            post_name: "Julie",
-            text: "If you find french buldog in Cerak. His name is Max. There is a reward!",
-            number:"0613978897",
-            picture:"../images/lost/Mica.PNG",
-            comments: ["500g","dewdwfq","pwnimrp","Last i saw her was hee and there"],
-            post_owner:"Maja"
-          },
-          {
-            post_name: "Buli",
-            text: "A bichon Lora, she has 7 months, last seen at Palilula. Please call if you have any info.",
-            number:"0646032298",
-            picture:"../images/lost/Piksi.jpg",
-            comments: ["500g","dewdwfq",",[pp[,[pp"],
-            post_owner:"Milos"
-          },
+      lost_animals = [
+        {
+          post_name: "Džaja",
+          text: "If you find a domestic cat in New Belgrade. It responds to the name Džaja. There is a reward!",
+          number:"0613978897",
+          picture:"../images/lost/Dzaja.jpg",
+          comments: ["I think I saw him on the bridge near the Arena!","It's hard to find him, they're all the same...","Good luck with your search","Oh, what a cute cat, I hope you find him! "],
+          post_owner:"Milos"
+        },
+        {
+          post_name: "Jura",
+          text: "Bichon Jura, 7 months old, last seen on Palilula.",
+          number:"0646032298",
+          picture:"../images/lost/Jura.jpg",
+          comments: ["If I'm around I'll take a look!","7 months, still a baby, he must be scared","I hope you find him soon!"],
+          post_owner:"Maja"
+        },
+        {
+          post_name: "Max",
+          text: "Max the parrot was scared by the neighbor's kitten and flew away, Vračar.",
+          number:"0613978897",
+          picture:"../images/lost/Koki.jpg",
+          comments: ["I know I'm a worm so I'll try to call him","Beautiful colors, good luck with your search!"],
+          post_owner:"Milos"
+        }, {
+          post_name: "July",
+          text: "Canary disappeared from the terrace in Surčin! Responds to Juli",
+          number:"0613978897",
+          picture:"../images/lost/Mica.PNG",
+          comments: ["Oh he's so small, I hope you find him soon","I thought I saw him with the sparrows in the park eating worms in front, in the center"],
+          post_owner:"Maja"
+        },
+        {
+          post_name: "Lora",
+          text: "The terrier Lora disappeared, she was scared of a big dog and ran away on Zemunski Quay.",
+          number:"0646032298",
+          picture:"../images/lost/Piksi.jpg",
+          comments: ["I'm passing by today, I'll let you know if I find anything out!","Just don't jump into the water","Maybe call the firemen or divers"],
+          post_owner:"Milos"
+        },
           
 
         
