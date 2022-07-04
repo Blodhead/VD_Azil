@@ -7,7 +7,7 @@ function initialize(){
 }else{
     document.getElementById("addnotice").style.display="inline-block";
 }
-    let animal = localStorage.getItem("lost");
+    let animal = localStorage.getItem("lost-srb");
     if(animal != null){
         lost_animals = JSON.parse(animal);
     }else{
@@ -99,7 +99,7 @@ function initialize(){
       localStorage.removeItem("comments_to_delete");
     }
 
-    localStorage.setItem("lost",JSON.stringify(lost_animals));
+    localStorage.setItem("lost-srb",JSON.stringify(lost_animals));
     fill_html();
 
 
@@ -212,7 +212,7 @@ document.getElementById("com"+i).innerHTML+=
    document.getElementById("textAreaExample"+i).value+
 "</div>";
 lost_animals[i].comments.push(document.getElementById("textAreaExample"+i).value);
-localStorage.setItem("lost",JSON.stringify(lost_animals));
+localStorage.setItem("lost-srb",JSON.stringify(lost_animals));
 
 var kor = JSON.parse(localStorage.getItem("users"));
 var tren = localStorage.getItem("current_user");

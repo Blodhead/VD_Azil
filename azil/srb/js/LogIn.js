@@ -59,7 +59,7 @@ function checkUser(){
 function fill_page(){
   document.getElementById("contis").innerHTML="";
 
-  var load_lost = localStorage.getItem("lost");
+  var load_lost = localStorage.getItem("lost-srb");
   var load = JSON.parse(load_lost);
 
   document.getElementById("contis").innerHTML+=
@@ -182,7 +182,7 @@ if(del == null){
 
 users[l].comid.splice(temp,1);
 
-var del_comment = JSON.parse(localStorage.getItem("lost"));
+var del_comment = JSON.parse(localStorage.getItem("lost-srb"));
 for(var i = 0; i < del_comment.length; i++)
 for(var x = (del_comment[i].comments.length-1); x >= 0; x--){
 
@@ -196,7 +196,7 @@ for(var x = (del_comment[i].comments.length-1); x >= 0; x--){
 
 }
 users[l].comments.splice(temp, 1);
-localStorage.setItem("lost",JSON.stringify(del_comment));
+localStorage.setItem("lost-srb",JSON.stringify(del_comment));
 localStorage.setItem("users",JSON.stringify(users));
 
     document.location.reload();
@@ -205,7 +205,7 @@ localStorage.setItem("users",JSON.stringify(users));
 
 function removePost(i){
 
-    var lost = JSON.parse(localStorage.getItem("lost"));
+    var lost = JSON.parse(localStorage.getItem("lost-srb"));
     var del = JSON.parse(localStorage.getItem("comments_to_delete"));
 
     var kor = JSON.parse(localStorage.getItem("users"));
@@ -231,6 +231,6 @@ while(kor[l].username != tren){l++;};
     localStorage.setItem("comments_to_delete",JSON.stringify(del));
     localStorage.setItem("users",JSON.stringify(users));
     lost.splice(i,1);
-    localStorage.setItem("lost",JSON.stringify(lost));
+    localStorage.setItem("lost-srb",JSON.stringify(lost));
     document.location.reload();
 }
