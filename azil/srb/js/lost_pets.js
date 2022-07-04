@@ -131,9 +131,9 @@ function fill_html(){
                "</div>"+
                "<div class=\"u-align-left-lg u-align-left-md u-align-left-sm u-blog-control u-post-content u-text u-text-6\">"+ lost_animals[i].text +"</div>"+
                "<table id=\"table\"> <tr><td>"+
-               "<button id=\"flip-card-btn-turn-to-back"+i+"\" class=\"flip-card-btn-turn-to-back u-blog-control u-btn u-button-style\">Comment</button>"+
+               "<button id=\"flip-card-btn-turn-to-back"+i+"\" class=\"flip-card-btn-turn-to-back u-blog-control u-btn u-button-style\">Коментариши</button>"+
                "</td><td>"+
-               "<button id=\"flip-card-btn-turn-to-back"+i+"\" class=\"u-blog-control u-btn u-button-style\" onclick=\"toPDF("+i+")\">to PDF</button>"+
+               "<button id=\"flip-card-btn-turn-to-back"+i+"\" class=\"u-blog-control u-btn u-button-style\" onclick=\"toPDF("+i+")\">у PDF</button>"+
               "</td></tr></table>"+
             "</div>"+
            "</div>"+
